@@ -85,3 +85,6 @@
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = git@github.com:msanders/snipmate.vim.git
+[submodule "bundle/git"]
+	path = bundle/git
+	url = git@github.com:tpope/vim-git.git
