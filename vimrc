@@ -90,6 +90,8 @@ let g:airline_powerline_fonts = 1
 " Menu when completing commands
 set wildmenu
 
+execute pathogen#infect()
+
 filetype plugin on
 filetype plugin indent on
 
@@ -117,8 +119,6 @@ set grepprg=grep\ -nH\ $*
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
-
-execute pathogen#infect()
 
 " Gist config {{{
 let g:gist_open_browser_after_post = 1
