@@ -56,6 +56,8 @@ endif
 
 " Personnal configuration {{{
 
+execute pathogen#infect()
+
 " 256 colors and molokai theme
 set t_Co=256
 " Buggy
@@ -89,8 +91,6 @@ let g:airline_powerline_fonts = 1
 
 " Menu when completing commands
 set wildmenu
-
-execute pathogen#infect()
 
 filetype plugin on
 filetype plugin indent on
