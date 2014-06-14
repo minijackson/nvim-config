@@ -56,6 +56,8 @@ endif
 
 " Personnal configuration {{{
 
+execute pathogen#infect()
+
 " 256 colors and molokai theme
 set t_Co=256
 " Buggy
@@ -93,8 +95,6 @@ set wildmenu
 
 " Search highlighting
 set hlsearch
-
-execute pathogen#infect()
 
 filetype plugin on
 filetype plugin indent on
