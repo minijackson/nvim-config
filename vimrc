@@ -71,6 +71,7 @@ set autoindent
 set smartindent
 set tabstop=4
 set shiftwidth=4
+set smartcase
 
 " Line wrapping
 set nowrap
@@ -89,6 +90,9 @@ let g:airline_powerline_fonts = 1
 
 " Menu when completing commands
 set wildmenu
+
+" Search highlighting
+set hlsearch
 
 execute pathogen#infect()
 
