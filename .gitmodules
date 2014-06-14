@@ -97,3 +97,6 @@
 [submodule "bundle/undotree"]
 	path = bundle/undotree
 	url = https://github.com/mbbill/undotree.git
+[submodule "bundle/gdbmgr"]
+	path = bundle/gdbmgr
+	url = https://github.com/vim-scripts/gdbmgr.git
