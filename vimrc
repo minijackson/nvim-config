@@ -68,6 +68,9 @@ set cursorline
 
 set backup
 set backupdir=/tmp
+set undofile
+
+set cm=blowfish
 
 set autoindent
 set smartindent
