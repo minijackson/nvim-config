@@ -110,6 +110,9 @@ function! UpdateTags()
 	let resp = system(cmd)
 endfunction
 
+" Enabling cscopes
+set cscopetag cscopeverbose
+
 autocmd BufWritePost *.cpp,*.h,*.c call UpdateTags()
 
 setlocal omnifunc=syntaxcomplete#Complete
