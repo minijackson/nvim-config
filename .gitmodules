@@ -100,3 +100,6 @@
 [submodule "bundle/gdbmgr"]
 	path = bundle/gdbmgr
 	url = https://github.com/vim-scripts/gdbmgr.git
+[submodule "bundle/jellybeans"]
+	path = bundle/jellybeans
+	url = https://github.com/nanotech/jellybeans.vim
