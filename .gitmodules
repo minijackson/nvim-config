@@ -103,3 +103,6 @@
 [submodule "bundle/jellybeans"]
 	path = bundle/jellybeans
 	url = https://github.com/nanotech/jellybeans.vim
+[submodule "bundle/tcomment"]
+	path = bundle/tcomment
+	url = https://github.com/tomtom/tcomment_vim
