@@ -67,9 +67,6 @@
 [submodule "bundle/multiple-cursors"]
 	path = bundle/multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
-[submodule "bundle/plugins"]
-	path = bundle/plugins
-	url = https://github.com/WolfgangMehner/vim-plugins.git
 [submodule "bundle/repeat"]
 	path = bundle/repeat
 	url = https://github.com/tpope/vim-repeat.git
