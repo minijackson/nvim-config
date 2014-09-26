@@ -109,3 +109,15 @@
 [submodule "bundle/dispatch"]
 	path = bundle/dispatch
 	url = https://github.com/tpope/vim-dispatch.git
+[submodule "bundle/expand-region"]
+	path = bundle/expand-region
+	url = https://github.com/terryma/vim-expand-region.git
+[submodule "bundle/column-textobj"]
+	path = bundle/column-textobj
+	url = https://github.com/coderifous/textobj-word-column.vim.git
+[submodule "bundle/css3-syntax"]
+	path = bundle/css3-syntax
+	url = https://github.com/hail2u/vim-css3-syntax.git
+[submodule "bundle/R-plugin"]
+	path = bundle/R-plugin
+	url = https://github.com/vim-scripts/Vim-R-plugin.git
