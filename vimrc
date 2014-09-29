@@ -127,6 +127,12 @@ set grepprg=grep\ -nH\ $*
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 
+" Syntastic config {{{
+
+" Use C++11
+let g:syntastic_cpp_compiler_options = '-std=c++0x'
+" }}}
+
 " Gist config {{{
 let g:gist_open_browser_after_post = 1
 let g:gist_show_privates = 1
