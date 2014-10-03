@@ -121,3 +121,6 @@
 [submodule "bundle/R-plugin"]
 	path = bundle/R-plugin
 	url = https://github.com/vim-scripts/Vim-R-plugin.git
+[submodule "bundle/align"]
+	path = bundle/align
+	url = https://github.com/tsaleh/vim-align.git
