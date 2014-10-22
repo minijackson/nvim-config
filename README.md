@@ -2,11 +2,8 @@ Installation
 ============
 
 ```sh
-git clone <repo url> ~/.vim
+git clone <repo url> --recursive ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
-cd ~/.vim
-git submodule init
-git submodule update
 # For the GdbMgr plugin
 cd ~/.vim/bundle/gdbmgr/gdbmgr/src/
 make
