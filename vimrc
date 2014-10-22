@@ -101,6 +101,9 @@ filetype plugin indent on
 
 set nocp
 
+let g:maplocalleader=","
+let g:mapleader=";"
+
 " Update tags when writing C/C++ file
 function! UpdateTags()
 	let cmd = 'ctags -R --c++-kinds=+p --fields=+iaS --extra=+q'
@@ -126,6 +129,7 @@ set grepprg=grep\ -nH\ $*
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
+let g:tex_verbspell=1
 
 " Syntastic config {{{
 
