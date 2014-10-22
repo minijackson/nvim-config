@@ -130,7 +130,14 @@ let g:tex_flavor='latex'
 " Syntastic config {{{
 
 " Use C++11
-let g:syntastic_cpp_compiler_options = '-std=c++0x'
+let g:syntastic_cpp_checkers = ['gcc', 'cppcheck']
+let g:syntastic_cpp_compiler_options = '-std=c++0x -Wall -Wextra -Wpedantic'
+let g:syntastic_c_compiler_options = '-std=c99 -Wall -Wextra -Wpedantic'
+
+" Use python3
+let g:syntastic_python_checkers = ['pylama', 'python']
+let g:syntastic_python_python_exec = '/usr/bin/python3'
+
 " }}}
 
 " Gist config {{{
