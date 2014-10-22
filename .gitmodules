@@ -118,9 +118,6 @@
 [submodule "bundle/css3-syntax"]
 	path = bundle/css3-syntax
 	url = https://github.com/hail2u/vim-css3-syntax.git
-[submodule "bundle/R-plugin"]
-	path = bundle/R-plugin
-	url = https://github.com/vim-scripts/Vim-R-plugin.git
 [submodule "bundle/align"]
 	path = bundle/align
 	url = https://github.com/tsaleh/vim-align.git
@@ -130,3 +127,6 @@
 [submodule "bundle/yankstack"]
 	path = bundle/yankstack
 	url = https://github.com/maxbrunsfeld/vim-yankstack.git
+[submodule "R-plugin"]
+	path = bundle/R-plugin
+	url = https://github.com/jcfaria/Vim-R-plugin.git
