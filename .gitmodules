@@ -130,3 +130,6 @@
 [submodule "R-plugin"]
 	path = bundle/R-plugin
 	url = https://github.com/jcfaria/Vim-R-plugin.git
+[submodule "bundle/grammarous"]
+	path = bundle/grammarous
+	url = https://github.com/rhysd/vim-grammarous.git
