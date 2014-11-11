@@ -16,7 +16,8 @@ unlet b:current_syntax
 
 syntax include @Python syntax/python.vim
 
-syntax region pythonChunk matchgroup=pythonChunkDelim start="\\begin{python}" end="\\end{python}\|%stopzone\>" containedin=@TeX contains=@Python
+syntax region pythonString matchgroup=quotes start='"' end='"' skip='\\"' containedin=@Python contains=@TeX
+syntax region pythonChunk matchgroup=pythonChunkDelim start="\\begin{python}" end="\\end{python}\|%stopzone\>" containedin=@TeX contains=@Python,pythonString
 
 highlight link pythonChunkDelim SpecialComment
 let b:current_syntax = "tex"
