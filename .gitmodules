@@ -133,3 +133,9 @@
 [submodule "bundle/grammarous"]
 	path = bundle/grammarous
 	url = https://github.com/rhysd/vim-grammarous.git
+[submodule "bundle/vim-arduino"]
+	path = bundle/vim-arduino
+	url = git@github.com:minijackson/vim-arduino.git
+[submodule "bundle/splitjoin"]
+	path = bundle/splitjoin
+	url = https://github.com/AndrewRadev/splitjoin.vim.git
