@@ -1,141 +1,188 @@
 [submodule "bundle/ag"]
 	path = bundle/ag
 	url = https://github.com/rking/ag.vim.git
+	branch = master
 [submodule "bundle/AutoTag"]
 	path = bundle/AutoTag
 	url = https://github.com/akuendig/AutoTag.git
+	branch = master
 [submodule "bundle/CoVim"]
 	path = bundle/CoVim
 	url = https://github.com/FredKSchott/CoVim.git
+	branch = master
 [submodule "bundle/csv"]
 	path = bundle/csv
 	url = https://github.com/chrisbra/csv.vim.git
+	branch = master
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
+	branch = master
 [submodule "bundle/emmet"]
 	path = bundle/emmet
 	url = https://github.com/mattn/emmet-vim.git
+	branch = master
 [submodule "bundle/gist"]
 	path = bundle/gist
 	url = https://github.com/mattn/gist-vim.git
+	branch = master
 [submodule "bundle/javacomplete"]
 	path = bundle/javacomplete
 	url = https://github.com/Shougo/javacomplete.git
+	branch = master
 [submodule "bundle/JavaScript-syntax"]
 	path = bundle/JavaScript-syntax
 	url = https://github.com/vim-scripts/JavaScript-syntax.git
+	branch = master
 [submodule "bundle/jedi"]
 	path = bundle/jedi
 	url = https://github.com/davidhalter/jedi-vim.git
+	branch = master
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = https://github.com/vim-scripts/matchit.zip.git
+	branch = master
 [submodule "bundle/molokai"]
 	path = bundle/molokai
 	url = https://github.com/tomasr/molokai.git
+	branch = master
 [submodule "bundle/neocomplete"]
 	path = bundle/neocomplete
 	url = https://github.com/Shougo/neocomplete.vim.git
+	branch = master
 [submodule "bundle/PIV"]
 	path = bundle/PIV
 	url = https://github.com/spf13/PIV.git
+	branch = master
 [submodule "bundle/snipmate-snippets"]
 	path = bundle/snipmate-snippets
 	url = https://github.com/spf13/snipmate-snippets.git
+	branch = master
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+	branch = master
 [submodule "bundle/tmuxline"]
 	path = bundle/tmuxline
 	url = https://github.com/edkolev/tmuxline.vim.git
+	branch = master
 [submodule "bundle/airline"]
 	path = bundle/airline
 	url = https://github.com/bling/vim-airline.git
+	branch = master
 [submodule "bundle/easymotion"]
 	path = bundle/easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
+	branch = master
 [submodule "bundle/exchange"]
 	path = bundle/exchange
 	url = https://github.com/tommcdo/vim-exchange.git
+	branch = master
 [submodule "bundle/gitgutter"]
 	path = bundle/gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
+	branch = master
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+	branch = master
 [submodule "bundle/multiple-cursors"]
 	path = bundle/multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
+	branch = master
 [submodule "bundle/repeat"]
 	path = bundle/repeat
 	url = https://github.com/tpope/vim-repeat.git
+	branch = master
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
+	branch = master
 [submodule "bundle/webapi"]
 	path = bundle/webapi
 	url = https://github.com/mattn/webapi-vim.git
+	branch = master
 [submodule "bundle/wombat256"]
 	path = bundle/wombat256
 	url = https://github.com/micha/wombat256.git
+	branch = master
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
+	branch = master
 [submodule "bundle/git"]
 	path = bundle/git
 	url = https://github.com/tpope/vim-git.git
+	branch = master
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
+	branch = master
 [submodule "bundle/merginal"]
 	path = bundle/merginal
 	url = https://github.com/vim-scripts/Merginal.git
+	branch = master
 [submodule "bundle/undotree"]
 	path = bundle/undotree
 	url = https://github.com/mbbill/undotree.git
+	branch = master
 [submodule "bundle/gdbmgr"]
 	path = bundle/gdbmgr
 	url = https://github.com/vim-scripts/gdbmgr.git
+	branch = master
 [submodule "bundle/jellybeans"]
 	path = bundle/jellybeans
 	url = https://github.com/nanotech/jellybeans.vim
+	branch = master
 [submodule "bundle/tcomment"]
 	path = bundle/tcomment
 	url = https://github.com/tomtom/tcomment_vim
+	branch = master
 [submodule "bundle/CamelCaseMotion"]
 	path = bundle/CamelCaseMotion
 	url = https://github.com/bkad/CamelCaseMotion.git
+	branch = master
 [submodule "bundle/dispatch"]
 	path = bundle/dispatch
 	url = https://github.com/tpope/vim-dispatch.git
+	branch = master
 [submodule "bundle/expand-region"]
 	path = bundle/expand-region
 	url = https://github.com/terryma/vim-expand-region.git
+	branch = master
 [submodule "bundle/column-textobj"]
 	path = bundle/column-textobj
 	url = https://github.com/coderifous/textobj-word-column.vim.git
+	branch = master
 [submodule "bundle/css3-syntax"]
 	path = bundle/css3-syntax
 	url = https://github.com/hail2u/vim-css3-syntax.git
+	branch = master
 [submodule "bundle/align"]
 	path = bundle/align
 	url = https://github.com/tsaleh/vim-align.git
+	branch = master
 [submodule "bundle/clang_complete"]
 	path = bundle/clang_complete
 	url = https://github.com/Rip-Rip/clang_complete.git
+	branch = master
 [submodule "bundle/yankstack"]
 	path = bundle/yankstack
 	url = https://github.com/maxbrunsfeld/vim-yankstack.git
+	branch = master
 [submodule "R-plugin"]
 	path = bundle/R-plugin
 	url = https://github.com/jcfaria/Vim-R-plugin.git
+	branch = master
 [submodule "bundle/grammarous"]
 	path = bundle/grammarous
 	url = https://github.com/rhysd/vim-grammarous.git
+	branch = master
 [submodule "bundle/vim-arduino"]
 	path = bundle/vim-arduino
 	url = git@github.com:minijackson/vim-arduino.git
+	branch = master
 [submodule "bundle/splitjoin"]
 	path = bundle/splitjoin
 	url = https://github.com/AndrewRadev/splitjoin.vim.git
+	branch = master
