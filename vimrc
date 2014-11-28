@@ -75,6 +75,8 @@ set shiftwidth=4
 set ignorecase
 set smartcase
 
+set backspace=indent,eol,start
+
 " Line wrapping
 set nowrap
 
