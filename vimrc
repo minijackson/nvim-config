@@ -153,7 +153,11 @@ let g:gist_post_private = 1
 " Mappings {{{
 " Toggle automatic paragraph formatting
 nmap cof :set =(&formatoptions =~ "a") ? 'formatoptions-=a' : 'formatoptions+=a'
-"}}}
+" }}}
+
+" Dictionaries and thesaurus {{{
+set thesaurus+=~/.vim/thesaurus.txt
+" }}}
 "}}}
 
 let g:clang_use_library=1
