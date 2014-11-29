@@ -178,3 +178,7 @@
 	path = bundle/polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
 	branch = master
+[submodule "bundle/coloresque"]
+	path = bundle/coloresque
+	url = https://github.com/gorodinskiy/vim-coloresque.git
+	branch = master
