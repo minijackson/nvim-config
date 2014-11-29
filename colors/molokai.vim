@@ -1,1 +1,0 @@
-/home/minijackson/.vim/bundle/molokai/colors/molokai.vim
