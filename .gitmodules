@@ -72,7 +72,7 @@
 	branch = master
 [submodule "bundle/gitgutter"]
 	path = bundle/gitgutter
-	url = git://github.com/airblade/vim-gitgutter.git
+	url = https://github.com/airblade/vim-gitgutter.git
 	branch = master
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
@@ -168,7 +168,7 @@
 	branch = master
 [submodule "bundle/vim-arduino"]
 	path = bundle/arduino
-	url = git@github.com:minijackson/vim-arduino.git
+	url = https://github.com/minijackson/vim-arduino.git
 	branch = master
 [submodule "bundle/splitjoin"]
 	path = bundle/splitjoin
@@ -185,3 +185,4 @@
 [submodule "bundle/SyntaxRange"]
 	path = bundle/SyntaxRange
 	url = https://github.com/vim-scripts/SyntaxRange.git
+	branch = master
