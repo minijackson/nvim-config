@@ -167,7 +167,7 @@
 	url = https://github.com/rhysd/vim-grammarous.git
 	branch = master
 [submodule "bundle/vim-arduino"]
-	path = bundle/vim-arduino
+	path = bundle/arduino
 	url = git@github.com:minijackson/vim-arduino.git
 	branch = master
 [submodule "bundle/splitjoin"]
@@ -182,3 +182,6 @@
 	path = bundle/coloresque
 	url = https://github.com/gorodinskiy/vim-coloresque.git
 	branch = master
+[submodule "bundle/SyntaxRange"]
+	path = bundle/SyntaxRange
+	url = https://github.com/vim-scripts/SyntaxRange.git
