@@ -186,3 +186,6 @@
 	path = bundle/SyntaxRange
 	url = https://github.com/vim-scripts/SyntaxRange.git
 	branch = master
+[submodule "bundle/howdoi"]
+	path = bundle/howdoi
+	url = https://github.com/laurentgoudet/vim-howdoi.git
