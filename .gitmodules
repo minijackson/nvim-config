@@ -194,3 +194,9 @@
 	path = bundle/dbext
 	url = https://github.com/vim-scripts/dbext.vim.git
 	branch = master
+[submodule "bundle/nodejs-complete"]
+	path = bundle/nodejs-complete
+	url = https://github.com/myhere/vim-nodejs-complete.git
+[submodule "bundle/node"]
+	path = bundle/node
+	url = https://github.com/moll/vim-node.git
