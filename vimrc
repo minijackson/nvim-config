@@ -60,6 +60,7 @@ set t_Co=256
 " set t_AB=^[[48;5;%dm
 " set t_AF=^[[38;5;%dm
 colorscheme molokai
+let g:tmuxline_preset="full"
 set cursorline
 
 set backup
@@ -165,4 +166,4 @@ set thesaurus+=~/.vim/thesaurus.txt
 let g:clang_use_library=1
 let g:clang_debug=1
 let g:clang_user_options = '-std=c++11'
-let g:clang_library_path="/usr/lib/llvm-3.5/lib/"
+let g:clang_library_path="/usr/lib64/"
