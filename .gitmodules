@@ -197,6 +197,12 @@
 [submodule "bundle/nodejs-complete"]
 	path = bundle/nodejs-complete
 	url = https://github.com/myhere/vim-nodejs-complete.git
+	branch = master
 [submodule "bundle/node"]
 	path = bundle/node
 	url = https://github.com/moll/vim-node.git
+	branch = master
+[submodule "bundle/csv"]
+	path = bundle/csv
+	url = https://github.com/chrisbra/csv.vim.git
+	branch = master
