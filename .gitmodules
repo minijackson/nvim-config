@@ -42,10 +42,6 @@
 	path = bundle/neocomplete
 	url = https://github.com/Shougo/neocomplete.vim.git
 	branch = master
-[submodule "bundle/PIV"]
-	path = bundle/PIV
-	url = https://github.com/spf13/PIV.git
-	branch = master
 [submodule "bundle/snipmate-snippets"]
 	path = bundle/snipmate-snippets
 	url = https://github.com/spf13/snipmate-snippets.git
