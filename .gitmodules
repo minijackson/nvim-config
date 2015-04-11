@@ -50,10 +50,6 @@
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
 	branch = master
-[submodule "bundle/tmuxline"]
-	path = bundle/tmuxline
-	url = https://github.com/edkolev/tmuxline.vim.git
-	branch = master
 [submodule "bundle/airline"]
 	path = bundle/airline
 	url = https://github.com/bling/vim-airline.git
@@ -201,4 +197,8 @@
 [submodule "bundle/csv"]
 	path = bundle/csv
 	url = https://github.com/chrisbra/csv.vim.git
+	branch = master
+[submodule "bundle/boxdraw"]
+	path = bundle/boxdraw
+	url = https://github.com/vim-scripts/boxdraw.git
 	branch = master
