@@ -54,12 +54,12 @@ endif
 
 execute pathogen#infect()
 
-" 256 colors and molokai theme
+" 256 colors and jellybeans theme
 set t_Co=256
 " Buggy
 " set t_AB=^[[48;5;%dm
 " set t_AF=^[[38;5;%dm
-colorscheme molokai
+colorscheme jellybeans
 let g:tmuxline_preset="full"
 set cursorline
 
