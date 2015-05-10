@@ -6,10 +6,6 @@
 	path = bundle/AutoTag
 	url = https://github.com/akuendig/AutoTag.git
 	branch = master
-[submodule "bundle/CoVim"]
-	path = bundle/CoVim
-	url = https://github.com/FredKSchott/CoVim.git
-	branch = master
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
@@ -17,10 +13,6 @@
 [submodule "bundle/emmet"]
 	path = bundle/emmet
 	url = https://github.com/mattn/emmet-vim.git
-	branch = master
-[submodule "bundle/gist"]
-	path = bundle/gist
-	url = https://github.com/mattn/gist-vim.git
 	branch = master
 [submodule "bundle/javacomplete"]
 	path = bundle/javacomplete
@@ -110,10 +102,6 @@
 	path = bundle/undotree
 	url = https://github.com/mbbill/undotree.git
 	branch = master
-[submodule "bundle/gdbmgr"]
-	path = bundle/gdbmgr
-	url = https://github.com/vim-scripts/gdbmgr.git
-	branch = master
 [submodule "bundle/jellybeans"]
 	path = bundle/jellybeans
 	url = https://github.com/nanotech/jellybeans.vim
@@ -129,10 +117,6 @@
 [submodule "bundle/dispatch"]
 	path = bundle/dispatch
 	url = https://github.com/tpope/vim-dispatch.git
-	branch = master
-[submodule "bundle/expand-region"]
-	path = bundle/expand-region
-	url = https://github.com/terryma/vim-expand-region.git
 	branch = master
 [submodule "bundle/column-textobj"]
 	path = bundle/column-textobj
@@ -177,14 +161,6 @@
 [submodule "bundle/SyntaxRange"]
 	path = bundle/SyntaxRange
 	url = https://github.com/vim-scripts/SyntaxRange.git
-	branch = master
-[submodule "bundle/howdoi"]
-	path = bundle/howdoi
-	url = https://github.com/laurentgoudet/vim-howdoi.git
-	branch = master
-[submodule "bundle/dbext"]
-	path = bundle/dbext
-	url = https://github.com/vim-scripts/dbext.vim.git
 	branch = master
 [submodule "bundle/nodejs-complete"]
 	path = bundle/nodejs-complete
