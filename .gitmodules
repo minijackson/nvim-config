@@ -202,3 +202,7 @@
 	path = bundle/boxdraw
 	url = https://github.com/vim-scripts/boxdraw.git
 	branch = master
+[submodule "bundle/r-runtime"]
+	path = bundle/r-runtime
+	url = https://github.com/jalvesaq/R-Vim-runtime.git
+	branch=master
