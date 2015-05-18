@@ -164,6 +164,6 @@ set thesaurus+=~/.vim/thesaurus.txt
 "}}}
 
 let g:clang_use_library=1
-let g:clang_debug=1
-let g:clang_user_options = '-std=c++11'
+let g:clang_c_options = '-std=gnu11'
+let g:clang_cpp_options = '-std=c++11'
 let g:clang_library_path="/usr/lib64/"

@@ -122,10 +122,6 @@
 	path = bundle/align
 	url = https://github.com/tsaleh/vim-align.git
 	branch = master
-[submodule "bundle/clang_complete"]
-	path = bundle/clang_complete
-	url = https://github.com/Rip-Rip/clang_complete.git
-	branch = master
 [submodule "bundle/yankstack"]
 	path = bundle/yankstack
 	url = https://github.com/maxbrunsfeld/vim-yankstack.git
@@ -185,3 +181,6 @@
 [submodule "bundle/tmux-focus-events"]
 	path = bundle/tmux-focus-events
 	url = git://github.com/tmux-plugins/vim-tmux-focus-events.git
+[submodule "bundle/clang"]
+	path = bundle/clang
+	url = https://github.com/justmao945/vim-clang
