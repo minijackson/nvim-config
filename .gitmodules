@@ -182,11 +182,10 @@
 	path = bundle/tmux-focus-events
 	url = git://github.com/tmux-plugins/vim-tmux-focus-events.git
 	branch = master
-[submodule "bundle/clang"]
-	path = bundle/clang
-	url = https://github.com/justmao945/vim-clang
-	branch = master
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
 	branch = master
+[submodule "bundle/clang_complete"]
+	path = bundle/clang_complete
+	url = https://github.com/Rip-Rip/clang_complete.git
