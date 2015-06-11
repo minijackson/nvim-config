@@ -34,10 +34,6 @@
 	path = bundle/neocomplete
 	url = https://github.com/Shougo/neocomplete.vim.git
 	branch = master
-[submodule "bundle/snipmate-snippets"]
-	path = bundle/snipmate-snippets
-	url = https://github.com/spf13/snipmate-snippets.git
-	branch = master
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
@@ -81,10 +77,6 @@
 [submodule "bundle/wombat256"]
 	path = bundle/wombat256
 	url = https://github.com/micha/wombat256.git
-	branch = master
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = https://github.com/msanders/snipmate.vim.git
 	branch = master
 [submodule "bundle/git"]
 	path = bundle/git
@@ -186,6 +178,15 @@
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
 	branch = master
-[submodule "bundle/clang_complete"]
-	path = bundle/clang_complete
-	url = https://github.com/Rip-Rip/clang_complete.git
+[submodule "bundle/rainbow_parentheses"]
+	path = bundle/rainbow_parentheses
+	url = https://github.com/kien/rainbow_parentheses.vim.git
+	branch = master
+[submodule "bundle/vimproc"]
+	path = bundle/vimproc
+	url = https://github.com/Shougo/vimproc.vim.git
+	branch = master
+[submodule "bundle/marching"]
+	path = bundle/marching
+	url = https://github.com/osyo-manga/vim-marching.git
+	branch = master
