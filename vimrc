@@ -195,4 +195,25 @@ let g:neocomplete#force_omni_input_patterns.cpp =
 			\ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
 "  }}}
 " }}}
+
+" Snippets {{{
+" Plugin key-mappings.
+imap <C-h>     <Plug>(neosnippet_expand_or_jump)
+smap <C-h>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-h>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
+
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+" }}}
+
 "}}}
