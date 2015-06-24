@@ -138,7 +138,7 @@ let g:tex_verbspell=1
 
 " Use C++11
 let g:syntastic_cpp_checkers = ['gcc', 'cppcheck']
-let g:syntastic_cpp_compiler_options = '-std=c++0x -Wall -Wextra -Wpedantic'
+let g:syntastic_cpp_compiler_options = '-std=c++11 -Wall -Wextra -Wpedantic'
 let g:syntastic_c_compiler_options = '-std=c99 -Wall -Wextra -Wpedantic'
 
 " Use python3
@@ -185,8 +185,6 @@ endif
 
 " C/C++ completion {{{
 " cooperate with neocomplete.vim
-let g:marching_enable_neocomplete = 1
-
 if !exists('g:neocomplete#force_omni_input_patterns')
    let g:neocomplete#force_omni_input_patterns = {}
 endif
@@ -202,14 +200,6 @@ imap <C-h>     <Plug>(neosnippet_expand_or_jump)
 smap <C-h>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-h>     <Plug>(neosnippet_expand_target)
 
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
-
 " For snippet_complete marker.
 if has('conceal')
   set conceallevel=2 concealcursor=niv
@@ -217,3 +207,7 @@ endif
 " }}}
 
 "}}}
+
+let g:clang_use_library=1
+let g:clang_c_options = '-std=gnu11'
+let g:clang_cpp_options = '-std=c++11'
