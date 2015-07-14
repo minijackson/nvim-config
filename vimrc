@@ -145,6 +145,12 @@ let g:syntastic_c_compiler_options = '-std=c99 -Wall -Wextra -Wpedantic'
 let g:syntastic_python_checkers = ['pylama', 'python']
 let g:syntastic_python_python_exec = '/usr/bin/python3'
 
+" Use location list
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " }}}
 
 " Gist config {{{
@@ -171,11 +177,12 @@ let g:neocomplete#enable_smart_case = 1
 " Set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 
+let g:neocomplete#fallback_mappings = ["\<C-x>\<C-o>", "\<C-x>\<C-n>"]
+
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Enable heavy omni completion.
@@ -192,6 +199,12 @@ endif
 let g:neocomplete#force_omni_input_patterns.cpp =
 			\ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
 "  }}}
+
+" Python completion {{{
+let g:neocomplete#force_omni_input_patterns.python =
+    \ '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
+"  }}}
+
 " }}}
 
 " Snippets {{{
