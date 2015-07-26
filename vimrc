@@ -35,9 +35,9 @@ endif
 
 " Uncomment the following to have Vim load indentation rules and plugins
 " according to the detected filetype.
-"if has("autocmd")
-"  filetype plugin indent on
-"endif
+if has("autocmd")
+  filetype plugin indent on
+endif
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
@@ -112,6 +112,20 @@ function! UpdateTags()
 	let cmd = 'ctags -R --c++-kinds=+p --fields=+iaS --extra=+q'
 	let resp = system(cmd)
 endfunction
+
+" Clang-Format options
+let g:clang_format#code_style = "mozilla"
+let g:clang_format#style_options = {
+			\ "BasedOnStyle"      : "Mozilla",
+			\ "TabWidth"          : 4,
+			\ "IndentWidth"       : 4,
+			\ "UseTab"            : "ForIndentation",
+			\ "SpaceBeforeParens" : "Never"
+			\ }
+
+let g:clang_format#auto_formatexpr = 1
+
+autocmd FileType c,cpp map <buffer><LocalLeader>f <Plug>(operator-clang-format)
 
 " Enabling cscopes
 set cscopetag cscopeverbose

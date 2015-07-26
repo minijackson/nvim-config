@@ -194,3 +194,11 @@
 	path = bundle/clang_complete
 	url = https://github.com/Rip-Rip/clang_complete.git
 	branch = master
+[submodule "bundle/operator-user"]
+	path = bundle/operator-user
+	url = https://github.com/kana/vim-operator-user.git
+	branch = master
+[submodule "bundle/clang-format"]
+	path = bundle/clang-format
+	url = https://github.com/rhysd/vim-clang-format.git
+	branch = master
