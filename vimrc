@@ -116,11 +116,19 @@ endfunction
 " Clang-Format options
 let g:clang_format#code_style = "mozilla"
 let g:clang_format#style_options = {
-			\ "BasedOnStyle"      : "Mozilla",
-			\ "TabWidth"          : 4,
-			\ "IndentWidth"       : 4,
-			\ "UseTab"            : "ForIndentation",
-			\ "SpaceBeforeParens" : "Never"
+			\ "BasedOnStyle"                   : "Mozilla",
+			\ "TabWidth"                       : 4,
+			\ "IndentWidth"                    : 4,
+			\ "UseTab"                         : "ForIndentation",
+			\ "SpaceBeforeParens"              : "Never",
+			\ "Standard"                       : "Cpp11",
+			\ "Cpp11BracedListStyle"           : "true",
+			\ "NamespaceIndentation"           : "All",
+			\ "AccessModifierOffset"           : -4,
+			\ "DerivePointerAlignment"         : "false",
+			\ "PointerAlignment"               : "Left",
+			\ "AlwaysBreakTemplateDeclarations": "true",
+			\ "AllowShortFunctionsOnASingleLine": "Empty"
 			\ }
 
 let g:clang_format#auto_formatexpr = 1
@@ -130,7 +138,7 @@ autocmd FileType c,cpp map <buffer><LocalLeader>f <Plug>(operator-clang-format)
 " Enabling cscopes
 set cscopetag cscopeverbose
 
-autocmd BufWritePost *.cpp,*.h,*.c call UpdateTags()
+"autocmd BufWritePost *.cpp,*.h,*.c call UpdateTags()
 
 setlocal omnifunc=syntaxcomplete#Complete
 
@@ -162,7 +170,6 @@ let g:syntastic_python_python_exec = '/usr/bin/python3'
 " Use location list
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " }}}
@@ -185,7 +192,7 @@ set thesaurus+=~/.vim/thesaurus.txt
 " Completion {{{
 
 " Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
+"let g:neocomplete#enable_at_startup = 1
 " Use smartcase.
 let g:neocomplete#enable_smart_case = 1
 " Set minimum syntax keyword length.
