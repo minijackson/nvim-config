@@ -10,10 +10,6 @@
 	path = bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
 	branch = master
-[submodule "bundle/emmet"]
-	path = bundle/emmet
-	url = https://github.com/mattn/emmet-vim.git
-	branch = master
 [submodule "bundle/javacomplete"]
 	path = bundle/javacomplete
 	url = https://github.com/Shougo/javacomplete.git
@@ -49,10 +45,6 @@
 [submodule "bundle/airline"]
 	path = bundle/airline
 	url = https://github.com/bling/vim-airline.git
-	branch = master
-[submodule "bundle/easymotion"]
-	path = bundle/easymotion
-	url = https://github.com/Lokaltog/vim-easymotion.git
 	branch = master
 [submodule "bundle/exchange"]
 	path = bundle/exchange
@@ -189,10 +181,6 @@
 [submodule "bundle/vimproc"]
 	path = bundle/vimproc
 	url = https://github.com/Shougo/vimproc.vim.git
-	branch = master
-[submodule "bundle/clang_complete"]
-	path = bundle/clang_complete
-	url = https://github.com/Rip-Rip/clang_complete.git
 	branch = master
 [submodule "bundle/operator-user"]
 	path = bundle/operator-user
