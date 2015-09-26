@@ -140,7 +140,7 @@ set cscopetag cscopeverbose
 
 "autocmd BufWritePost *.cpp,*.h,*.c call UpdateTags()
 
-setlocal completefunc=syntaxcomplete#Complete
+set completefunc=syntaxcomplete#Complete
 
 " Active le support de la souris
 set mouse=a
