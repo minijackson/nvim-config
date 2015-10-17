@@ -17,34 +17,20 @@ runtime! debian.vim
 " options, so any other options should be set AFTER setting 'compatible'.
 "set compatible
 
-" Vim5 and later versions support syntax highlighting. Uncommenting the next
-" line enables syntax highlighting by default.
-if has("syntax")
-  syntax on
-endif
-
-" If using a dark background within the editing area and syntax highlighting
-" turn on this option as well
+syntax on
 set background=dark
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-" Uncomment the following to have Vim load indentation rules and plugins
-" according to the detected filetype.
-if has("autocmd")
-  filetype plugin indent on
-endif
+filetype plugin indent on
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
-set showcmd		" Show (partial) command in status line.
-set autowrite		" Automatically save before commands like :next and :make
+set showcmd    " Show (partial) command in status line.
+set autowrite  " Automatically save before commands like :next and :make
 set autoread
-"set hidden		" Hide buffers when they are abandoned
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
@@ -100,10 +86,12 @@ set hlsearch
 filetype plugin on
 filetype plugin indent on
 
-set nocp
-
 let g:maplocalleader=","
 let g:mapleader=";"
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<C-k>"
+let g:UltiSnipsJumpBackwardTrigger="<C-j>"
 
 " Update tags when writing C/C++ file
 function! UpdateTags()
@@ -172,12 +160,6 @@ let g:syntastic_check_on_wq = 0
 
 " }}}
 
-" Gist config {{{
-let g:gist_open_browser_after_post = 1
-let g:gist_show_privates = 1
-let g:gist_post_private = 1
-" }}}
-
 " Mappings {{{
 " Toggle automatic paragraph formatting
 nmap cof :set =(&formatoptions =~ "a") ? 'formatoptions-=a' : 'formatoptions+=a'
@@ -189,54 +171,16 @@ set thesaurus+=~/.vim/thesaurus.txt
 
 " Completion {{{
 
-" Use neocomplete.
-"let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-
-let g:neocomplete#fallback_mappings = ["\<C-x>\<C-o>", "\<C-x>\<C-n>"]
-
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
-" Enable heavy omni completion.
-if !exists('g:neocomplete#sources#omni#input_patterns')
-  let g:neocomplete#sources#omni#input_patterns = {}
-endif
-
-" C/C++ completion {{{
-" cooperate with neocomplete.vim
-if !exists('g:neocomplete#force_omni_input_patterns')
-   let g:neocomplete#force_omni_input_patterns = {}
-endif
-
-let g:neocomplete#force_omni_input_patterns.cpp =
-			\ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
-"  }}}
-
-" Python completion {{{
-let g:neocomplete#force_omni_input_patterns.python =
-    \ '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
-"  }}}
-
 " }}}
 
-" Snippets {{{
-" Plugin key-mappings.
-imap <C-h>     <Plug>(neosnippet_expand_or_jump)
-smap <C-h>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-h>     <Plug>(neosnippet_expand_target)
-
-" For snippet_complete marker.
-if has('conceal')
-  set conceallevel=2 concealcursor=niv
-endif
-" }}}
+set conceallevel=2
+set concealcursor=nv
 
 "}}}
 
