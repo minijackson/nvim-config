@@ -142,21 +142,50 @@ set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 let g:tex_verbspell=1
 
-" Syntastic config {{{
+" Neomake config {{{
 
-" Use C++11
-let g:syntastic_cpp_checkers = ['gcc', 'cppcheck']
-let g:syntastic_cpp_compiler_options = '-std=c++11 -Wall -Wextra -Wpedantic'
-let g:syntastic_c_compiler_options = '-std=c99 -Wall -Wextra -Wpedantic'
+" Use C++14
+let g:neomake_cpp_clang_maker = {
+			\ "args": [
+				\ "-std=c++14",
+				\ "-fsyntax-only",
+				\ "-Wall",
+				\ "-Wextra",
+				\ "-Wpedantic",
+				\ ]
+			\ }
 
-" Use python3
-let g:syntastic_python_checkers = ['pylama', 'python']
-let g:syntastic_python_python_exec = '/usr/bin/python3'
+let g:neomake_cpp_gcc_maker = {
+			\ "args": [
+				\ "-std=c++14",
+				\ "-fsyntax-only",
+				\ "-Wall",
+				\ "-Wextra",
+				\ "-Wpedantic",
+				\ ]
+			\ }
 
-" Use location list
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_wq = 0
+let g:neomake_c_clang_maker = {
+			\ "args": [
+				\ "-std=gnu11",
+				\ "-fsyntax-only",
+				\ "-Wall",
+				\ "-Wextra",
+				\ "-Wpedantic",
+				\ ]
+			\ }
+
+let g:neomake_c_gcc_maker = {
+			\ "args": [
+				\ "-std=gnu11",
+				\ "-fsyntax-only",
+				\ "-Wall",
+				\ "-Wextra",
+				\ "-Wpedantic",
+				\ ]
+			\ }
+
+autocmd! BufWritePost * Neomake
 
 " }}}
 
@@ -166,7 +195,7 @@ nmap cof :set =(&formatoptions =~ "a") ? 'formatoptions-=a' : 'formatoptions+=a
 " }}}
 
 " Dictionaries and thesaurus {{{
-set thesaurus+=~/.vim/thesaurus.txt
+set thesaurus+=~/.nvim/thesaurus.txt
 " }}}
 
 " Completion {{{
