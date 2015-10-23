@@ -124,3 +124,6 @@
 [submodule "bundle/neomake"]
 	path = bundle/neomake
 	url = https://github.com/benekastah/neomake.git
+[submodule "bundle/vim-clang"]
+	path = bundle/vim-clang
+	url = https://github.com/justmao945/vim-clang.git
