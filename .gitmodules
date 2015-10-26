@@ -2,10 +2,6 @@
 	path = bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
 	branch = master
-[submodule "bundle/javacomplete"]
-	path = bundle/javacomplete
-	url = https://github.com/Shougo/javacomplete.git
-	branch = master
 [submodule "bundle/jedi"]
 	path = bundle/jedi
 	url = https://github.com/davidhalter/jedi-vim.git
@@ -124,3 +120,9 @@
 [submodule "bundle/neomake"]
 	path = bundle/neomake
 	url = https://github.com/benekastah/neomake.git
+[submodule "bundle/vim-clang"]
+	path = bundle/vim-clang
+	url = https://github.com/justmao945/vim-clang.git
+[submodule "bundle/javacomplete2"]
+	path = bundle/javacomplete2
+	url = https://github.com/artur-shaik/vim-javacomplete2.git
