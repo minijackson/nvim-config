@@ -107,6 +107,7 @@ let g:clang_format#style_options = {
 			\ "IndentWidth"                    : 4,
 			\ "UseTab"                         : "ForIndentation",
 			\ "SpaceBeforeParens"              : "Never",
+			\ "BreakBeforeBraces"              : "Attach",
 			\ "Standard"                       : "Cpp11",
 			\ "Cpp11BracedListStyle"           : "true",
 			\ "NamespaceIndentation"           : "All",
@@ -114,6 +115,7 @@ let g:clang_format#style_options = {
 			\ "DerivePointerAlignment"         : "false",
 			\ "PointerAlignment"               : "Left",
 			\ "AlwaysBreakTemplateDeclarations": "true",
+			\ "AlwaysBreakAfterDefinitionReturnType": "None",
 			\ "AllowShortFunctionsOnASingleLine": "Empty"
 			\ }
 

@@ -1,0 +1,31 @@
+#============
+#== Global ==
+#============
+
+global !p
+
+def getCommentBegin():
+    return vim.eval("&commentstring").split("%s")[0]
+
+def getCommentEnd():
+    return vim.eval("&commentstring").split("%s")[1]
+
+def comment(string):
+	commentstring = vim.eval("&commentstring")
+	return commentstring.replace("%s", "{}").format(string)
+
+endglobal
+
+#==============
+#== Snippets ==
+#==============
+
+snippet header "Header block"
+`!p
+snip.rv =  comment("===" +  ("=" * len(t[1])) + "===")
+`
+`!p snip.rv = getCommentBegin()`== $1 ==`!p snip.rv = getCommentEnd()`
+`!p
+snip.rv += comment("===" +  ("=" * len(t[1])) + "===")
+`
+endsnippet

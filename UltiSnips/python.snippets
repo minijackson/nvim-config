@@ -1,0 +1,83 @@
+# Thank you:
+# https://github.com/aalvarado/ultisnips-snippets/blob/master/python.snippets
+
+#============
+#== Global ==
+#============
+
+global !p
+
+def get_args(arglist):
+    args = [arg.split('=')[0].strip() for arg in arglist.split(',') if arg]
+    args = [arg for arg in args if arg and arg != "self"]
+
+    return args
+
+def write_docstring_args(args, snip):
+    if not args:
+        return
+
+    snip += ""
+
+    for arg in args:
+        snip += ":{}: @todo".format(arg)
+
+def write_init_body(args, parents, snip):
+    parents = [p.strip() for p in parents.split(",")]
+    parents = [p for p in parents if p != 'object' and p != '']
+
+    for p in parents:
+        snip += p + ".__init__(self)"
+
+    if parents:
+        snip += ""
+
+    for arg in args:
+        snip += "self.%s = %s" % (arg, arg)
+
+endglobal
+
+#==============
+#== Snippets ==
+#==============
+
+snippet #! "Python shebang" b
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+$0
+endsnippet
+
+snippet class "Class with docstrings" b
+class ${1:MyClass}(${2:object}):
+    """${3:Docstring for $1 }"""
+
+    def __init__(self$4):
+        """${5:@todo: to be defined}`!p
+snip.rv = ""
+snip >> 2
+
+args = get_args(t[4])
+
+write_docstring_args(args, snip)
+
+if args: snip += ""
+snip.rv += '"""'
+
+write_init_body(args, t[2], snip)
+`
+        $0
+endsnippet
+
+snippet def "Function" b
+def ${1:function}(`!p if snip.indent: snip.rv = 'self'`${2}):
+	"""${4:@todo: Docstring for $1}`!p
+snip.rv = ""
+snip >> 1
+
+args = get_args(t[2])
+write_docstring_args(args, snip)
+
+snip += ":returns: @todo"
+snip += '"""' `
+	${0:pass}
+endsnippet
