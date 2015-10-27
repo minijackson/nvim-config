@@ -126,3 +126,6 @@
 [submodule "bundle/javacomplete2"]
 	path = bundle/javacomplete2
 	url = https://github.com/artur-shaik/vim-javacomplete2.git
+[submodule "bundle/Nvim-R"]
+	path = bundle/Nvim-R
+	url = https://github.com/jalvesaq/Nvim-R.git
