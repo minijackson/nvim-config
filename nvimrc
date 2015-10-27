@@ -102,21 +102,23 @@ endfunction
 " Clang-Format options
 let g:clang_format#code_style = "mozilla"
 let g:clang_format#style_options = {
-			\ "BasedOnStyle"                   : "Mozilla",
-			\ "TabWidth"                       : 4,
-			\ "IndentWidth"                    : 4,
-			\ "UseTab"                         : "ForIndentation",
-			\ "SpaceBeforeParens"              : "Never",
-			\ "BreakBeforeBraces"              : "Attach",
-			\ "Standard"                       : "Cpp11",
-			\ "Cpp11BracedListStyle"           : "true",
-			\ "NamespaceIndentation"           : "All",
-			\ "AccessModifierOffset"           : -4,
-			\ "DerivePointerAlignment"         : "false",
-			\ "PointerAlignment"               : "Left",
-			\ "AlwaysBreakTemplateDeclarations": "true",
+			\ "BasedOnStyle"                     : "Mozilla",
+			\ "TabWidth"                         : 4,
+			\ "IndentWidth"                      : 4,
+			\ "ColumnLimit"                      : 100,
+			\ "UseTab"                           : "ForIndentation",
+			\ "SpaceBeforeParens"                : "Never",
+			\ "BreakBeforeBraces"                : "Attach",
+			\ "Standard"                         : "Cpp11",
+			\ "Cpp11BracedListStyle"             : "true",
+			\ "NamespaceIndentation"             : "All",
+			\ "ConstructorInitializerIndentWidth": 6,
+			\ "AccessModifierOffset"             : -4,
+			\ "DerivePointerAlignment"           : "false",
+			\ "PointerAlignment"                 : "Left",
+			\ "AlwaysBreakTemplateDeclarations"  : "true",
 			\ "AlwaysBreakAfterDefinitionReturnType": "None",
-			\ "AllowShortFunctionsOnASingleLine": "Empty"
+			\ "AllowShortFunctionsOnASingleLine"  : "Empty"
 			\ }
 
 let g:clang_format#auto_formatexpr = 1
@@ -145,6 +147,15 @@ let g:tex_flavor='latex'
 let g:tex_verbspell=1
 
 " Neomake config {{{
+
+let g:neomake_error_sign = {
+			\ 'text': '✘',
+			\ 'texthl': 'ErrorMsg',
+			\ }
+let g:neomake_warning_sign = {
+			\ 'text': '▲',
+			\ 'texthl': 'WarningMsg',
+			\ }
 
 " Use C++14
 let g:neomake_cpp_clang_maker = {
