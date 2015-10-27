@@ -1,10 +1,77 @@
+#============
+#== Global ==
+#============
+
+global !p
+
+def doxygenDescriptionDocumentation(name, snip):
+	snip.rv += snip.mkline("/*! \\brief {0} description".format(name))
+	snip += " *"
+	snip += " * Detailed description"
+
+def doxygenGenericDocumentation(name, snip):
+	doxygenDescriptionDocumentation(name, snip)
+	snip += " */"
+
+def doxygenFunctionDocumentation(functionName, arguments, returnType, snip):
+	functionName = functionName.split("::")[-1]
+	doxygenDescriptionDocumentation(functionName, snip)
+	if arguments != "":
+		snip += " *"
+		for argument in arguments.split(","):
+			argumentName = argument.strip().split(" ")[-1]
+			snip += " * \\param {} argument description".format(argumentName)
+
+	if returnType != "void":
+		snip += " *"
+		snip += " * \\return return value description"
+
+	snip += " */"
+
+endglobal
+
+#==============
+#== Snippets ==
+#==============
+
 snippet inc
 #include <${1:iostream}>
-$0
 endsnippet
 
 snippet main
 int main(${1:int argc, char const* argv[]}) {
+	$0
+}
+endsnippet
+
+snippet hfunc
+`!p doxygenFunctionDocumentation(t[2], t[3], t[1], snip)`
+${1:void} ${2:functionName}($3);
+endsnippet
+
+snippet func
+${1:void} ${2:functionName}($3) {
+	$0
+}
+endsnippet
+
+snippet class
+`!p doxygenGenericDocumentation(t[1], snip)`
+class ${1:ClassName} $2{
+public:
+`!p
+snip >> 1
+doxygenFunctionDocumentation(t[1], t[3], "void", snip)
+`
+	$1($3);
+protected:
+private:
+};
+endsnippet
+
+snippet namespace
+`!p doxygenGenericDocumentation(t[1], snip)`
+namespace ${1:namespaceName} {
 	$0
 }
 endsnippet
