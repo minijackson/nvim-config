@@ -11,8 +11,11 @@ def getCommentEnd():
     return vim.eval("&commentstring").split("%s")[1]
 
 def comment(string):
-	commentstring = vim.eval("&commentstring")
-	return commentstring.replace("%s", "{}").format(string)
+    commentstring = vim.eval("&commentstring")
+    return commentstring.replace("%s", "{}").format(string)
+
+def getMaxWidth():
+    return vim.eval("&colorcolumn")
 
 endglobal
 
@@ -21,11 +24,29 @@ endglobal
 #==============
 
 snippet header "Header block"
-`!p
-snip.rv =  comment("===" +  ("=" * len(t[1])) + "===")
-`
+`!p snip.rv =  comment("===" +  ("=" * len(t[1])) + "===")`
 `!p snip.rv = getCommentBegin()`== $1 ==`!p snip.rv = getCommentEnd()`
+`!p snip.rv += comment("===" +  ("=" * len(t[1])) + "===")`
+endsnippet
+
+snippet bheader "Big header block"
 `!p
-snip.rv += comment("===" +  ("=" * len(t[1])) + "===")
-`
+maxWidth = int(getMaxWidth())
+commentBegin = getCommentBegin()
+commentEnd = getCommentEnd()
+
+commentLessMaxWidth = maxWidth - (len(commentBegin) + len(commentEnd))
+
+snip.rv = comment("=" * commentLessMaxWidth)
+
+remainingSpace = commentLessMaxWidth - 4 - len(t[1])
+whitespaceBegin = " " * int(remainingSpace / 2)
+whitespaceEnd = whitespaceBegin
+
+if remainingSpace % 2 == 1:
+	whitespaceEnd += " "
+
+snip += getCommentBegin() + "==" + whitespaceBegin
+`$1`!p snip.rv = getCommentEnd() + whitespaceEnd + "=="`
+`!p snip.rv = comment("=" * commentLessMaxWidth)`
 endsnippet
