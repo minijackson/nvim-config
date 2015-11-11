@@ -129,3 +129,6 @@
 [submodule "bundle/Nvim-R"]
 	path = bundle/Nvim-R
 	url = https://github.com/jalvesaq/Nvim-R.git
+[submodule "bundle/editorconfig"]
+	path = bundle/editorconfig
+	url = https://github.com/editorconfig/editorconfig-vim.git
