@@ -117,18 +117,24 @@
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+	branch = master
 [submodule "bundle/neomake"]
 	path = bundle/neomake
 	url = https://github.com/benekastah/neomake.git
+	branch = master
 [submodule "bundle/vim-clang"]
 	path = bundle/vim-clang
 	url = https://github.com/justmao945/vim-clang.git
+	branch = master
 [submodule "bundle/javacomplete2"]
 	path = bundle/javacomplete2
 	url = https://github.com/artur-shaik/vim-javacomplete2.git
+	branch = master
 [submodule "bundle/Nvim-R"]
 	path = bundle/Nvim-R
 	url = https://github.com/jalvesaq/Nvim-R.git
+	branch = master
 [submodule "bundle/editorconfig"]
 	path = bundle/editorconfig
 	url = https://github.com/editorconfig/editorconfig-vim.git
+	branch = master

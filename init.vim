@@ -103,9 +103,9 @@ endfunction
 let g:clang_format#code_style = "mozilla"
 let g:clang_format#style_options = {
 			\ "BasedOnStyle"                     : "Mozilla",
+			\ "ColumnLimit"                      : 100,
 			\ "TabWidth"                         : 4,
 			\ "IndentWidth"                      : 4,
-			\ "ColumnLimit"                      : 100,
 			\ "UseTab"                           : "ForIndentation",
 			\ "SpaceBeforeParens"                : "Never",
 			\ "BreakBeforeBraces"                : "Attach",
