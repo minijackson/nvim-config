@@ -118,7 +118,9 @@ let g:clang_format#style_options = {
 			\ "PointerAlignment"                 : "Left",
 			\ "AlwaysBreakTemplateDeclarations"  : "true",
 			\ "AlwaysBreakAfterDefinitionReturnType": "None",
-			\ "AllowShortFunctionsOnASingleLine"  : "Empty"
+			\ "AllowShortFunctionsOnASingleLine" : "Empty",
+			\ "AlignConsecutiveAssignments "     : "true",
+			\ "AlignTrailingComments"            : "true"
 			\ }
 
 let g:clang_format#auto_formatexpr = 1
@@ -139,12 +141,6 @@ set mouse=a
 " search in a singe file. This will confuse Latex-Suite. Set your grep
 " program to always generate a file-name.
 set grepprg=grep\ -nH\ $*
-
-" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
-" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-" The following changes the default filetype back to 'tex':
-let g:tex_flavor='latex'
-let g:tex_verbspell=1
 
 " Neomake config {{{
 
@@ -209,16 +205,6 @@ nmap cof :set =(&formatoptions =~ "a") ? 'formatoptions-=a' : 'formatoptions+=a
 
 " Dictionaries and thesaurus {{{
 set thesaurus+=~/.nvim/thesaurus.txt
-" }}}
-
-" Completion {{{
-
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
 " }}}
 
 set conceallevel=2
