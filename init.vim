@@ -212,6 +212,8 @@ set concealcursor=nv
 
 "}}}
 
+let g:jedi#force_py_version = 3
+
 let g:clang_use_library=1
 let g:clang_c_options = '-std=gnu11'
 let g:clang_cpp_options = '-std=c++14'
