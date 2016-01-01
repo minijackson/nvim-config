@@ -130,8 +130,6 @@ autocmd FileType c,cpp map <buffer><LocalLeader>f <Plug>(operator-clang-format)
 " Enabling cscopes
 set cscopetag cscopeverbose
 
-"autocmd BufWritePost *.cpp,*.h,*.c call UpdateTags()
-
 set completefunc=syntaxcomplete#Complete
 
 " Active le support de la souris
@@ -153,47 +151,6 @@ let g:neomake_warning_sign = {
 			\ 'texthl': 'WarningMsg',
 			\ }
 
-" Use C++14
-let g:neomake_cpp_clang_maker = {
-			\ "args": [
-				\ "-std=c++14",
-				\ "-fsyntax-only",
-				\ "-Wall",
-				\ "-Wextra",
-				\ "-Wpedantic",
-				\ ]
-			\ }
-
-let g:neomake_cpp_gcc_maker = {
-			\ "args": [
-				\ "-std=c++14",
-				\ "-fsyntax-only",
-				\ "-Wall",
-				\ "-Wextra",
-				\ "-Wpedantic",
-				\ ]
-			\ }
-
-let g:neomake_c_clang_maker = {
-			\ "args": [
-				\ "-std=gnu11",
-				\ "-fsyntax-only",
-				\ "-Wall",
-				\ "-Wextra",
-				\ "-Wpedantic",
-				\ ]
-			\ }
-
-let g:neomake_c_gcc_maker = {
-			\ "args": [
-				\ "-std=gnu11",
-				\ "-fsyntax-only",
-				\ "-Wall",
-				\ "-Wextra",
-				\ "-Wpedantic",
-				\ ]
-			\ }
-
 autocmd! BufWritePost * Neomake
 
 " }}}
@@ -213,7 +170,3 @@ set concealcursor=nv
 "}}}
 
 let g:jedi#force_py_version = 3
-
-let g:clang_use_library=1
-let g:clang_c_options = '-std=gnu11'
-let g:clang_cpp_options = '-std=c++14'
