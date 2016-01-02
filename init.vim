@@ -119,7 +119,8 @@ let g:clang_format#style_options = {
 			\ "AlwaysBreakTemplateDeclarations"  : "true",
 			\ "AlwaysBreakAfterDefinitionReturnType": "None",
 			\ "AllowShortFunctionsOnASingleLine" : "Empty",
-			\ "AlignConsecutiveAssignments "     : "true",
+			\ "AllowShortBlocksOnASingleLine"    : "false",
+			\ "AlignConsecutiveAssignments"      : "true",
 			\ "AlignTrailingComments"            : "true"
 			\ }
 
