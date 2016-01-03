@@ -20,3 +20,5 @@ let g:neomake_c_gcc_maker = {
 				\ "-Wpedantic",
 				\ ]
 			\ }
+
+let g:neomake_cpp_clangtidy_args = ["--checks=*", "%:p", "--", "-std=c++14", "-Wall", "-Wextra"]

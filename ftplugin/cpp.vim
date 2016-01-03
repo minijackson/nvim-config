@@ -4,7 +4,11 @@ set colorcolumn=100
 let g:clang_use_library=1
 let g:clang_cpp_options = '-std=c++14'
 
-let g:neomake_cpp_enabled_makers = ["clang", "clangtidy"]
+let g:neomake_cpp_enabled_makers = ["clang"]
+
+if neomake#utils#Exists('clang-tidy')
+	call add(g:neomake_cpp_enabled_makers, 'clangtidy')
+endif
 
 " Use C++14
 let g:neomake_cpp_clang_maker = {
@@ -27,4 +31,4 @@ let g:neomake_cpp_gcc_maker = {
 				\ ]
 			\ }
 
-let g:neomake_cpp_clangtidy_args = ["--header-filter=.*", "--checks=*", "%:p", "--", "-std=c++14", "-Wall", "-Wextra"]
+let g:neomake_cpp_clangtidy_args = ["--checks=*", "%:p", "--", "-std=c++14", "-Wall", "-Wextra"]
