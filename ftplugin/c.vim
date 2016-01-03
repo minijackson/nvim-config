@@ -21,4 +21,4 @@ let g:neomake_c_gcc_maker = {
 				\ ]
 			\ }
 
-let g:neomake_cpp_clangtidy_args = ["--checks=*", "%:p", "--", "-std=c++14", "-Wall", "-Wextra"]
+let g:neomake_c_clangtidy_args = ["--checks=*", "%:p", "--", "-std=gnu11", "-Wall", "-Wextra"]
