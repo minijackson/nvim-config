@@ -161,3 +161,7 @@
 	path = bundle/easy-align
 	url = https://github.com/junegunn/vim-easy-align.git
 	branch = master
+[submodule "bundle/dirvish"]
+	path = bundle/dirvish
+	url = https://github.com/justinmk/vim-dirvish.git
+	branch = master
