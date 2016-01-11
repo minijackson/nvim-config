@@ -58,10 +58,6 @@
 	path = bundle/CamelCaseMotion
 	url = https://github.com/bkad/CamelCaseMotion.git
 	branch = master
-[submodule "bundle/align"]
-	path = bundle/align
-	url = https://github.com/tsaleh/vim-align.git
-	branch = master
 [submodule "bundle/grammarous"]
 	path = bundle/grammarous
 	url = https://github.com/rhysd/vim-grammarous.git
@@ -160,4 +156,8 @@
 [submodule "bundle/webapi"]
 	path = bundle/webapi
 	url = https://github.com/mattn/webapi-vim.git
+	branch = master
+[submodule "bundle/easy-align"]
+	path = bundle/easy-align
+	url = https://github.com/junegunn/vim-easy-align.git
 	branch = master
