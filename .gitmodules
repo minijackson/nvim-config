@@ -153,3 +153,9 @@
 	path = bundle/AnsiEsc
 	url = https://github.com/powerman/vim-plugin-AnsiEsc.git
 	branch = master
+[submodule "bundle/gist"]
+	path = bundle/gist
+	url = https://github.com/mattn/gist-vim.git
+[submodule "bundle/webapi"]
+	path = bundle/webapi
+	url = https://github.com/mattn/webapi-vim.git
