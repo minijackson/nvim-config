@@ -118,6 +118,8 @@ let g:clang_format#style_options = {
 			\ "PointerAlignment"                 : "Left",
 			\ "AlwaysBreakTemplateDeclarations"  : "true",
 			\ "AlwaysBreakAfterDefinitionReturnType": "None",
+			\ "BinPackArguments"                    : "false",
+			\ "BinPackParameters"                   : "false",
 			\ "AllowShortFunctionsOnASingleLine" : "Empty",
 			\ "AllowShortBlocksOnASingleLine"    : "false",
 			\ "AlignConsecutiveAssignments"      : "true",
