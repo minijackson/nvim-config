@@ -170,6 +170,10 @@ set thesaurus+=~/.nvim/thesaurus.txt
 set conceallevel=2
 set concealcursor=nv
 
+nmap ga <Plug>(EasyAlign)
+
+call camelcasemotion#CreateMotionMappings(g:mapleader)
+
 "}}}
 
 let g:jedi#force_py_version = 3
