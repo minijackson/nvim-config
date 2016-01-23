@@ -1,5 +1,6 @@
 set completefunc=syntaxcomplete#Complete
 set colorcolumn=100
+set foldmethod=marker
 
 let g:clang_use_library=1
 let g:clang_cpp_options = '-std=c++14'
