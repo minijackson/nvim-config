@@ -18,6 +18,10 @@
 	path = bundle/airline
 	url = https://github.com/bling/vim-airline.git
 	branch = master
+[submodule "bundle/airline-themes"]
+	path = bundle/airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
+	branch = master
 [submodule "bundle/exchange"]
 	path = bundle/exchange
 	url = https://github.com/tommcdo/vim-exchange.git
