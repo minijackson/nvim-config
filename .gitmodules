@@ -57,7 +57,6 @@
 [submodule "bundle/jellybeans"]
 	path = bundle/jellybeans
 	url = https://github.com/nanotech/jellybeans.vim
-	branch = master
 [submodule "bundle/CamelCaseMotion"]
 	path = bundle/CamelCaseMotion
 	url = https://github.com/bkad/CamelCaseMotion.git
@@ -169,3 +168,6 @@
 	path = bundle/dirvish
 	url = https://github.com/justinmk/vim-dirvish.git
 	branch = master
+[submodule "bundle/rtags"]
+	path = bundle/rtags
+	url = https://github.com/lyuts/vim-rtags.git

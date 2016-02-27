@@ -41,11 +41,7 @@ endif
 
 execute pathogen#infect()
 
-" 256 colors and jellybeans theme
-set t_Co=256
-" Buggy
-" set t_AB=^[[48;5;%dm
-" set t_AF=^[[38;5;%dm
+let g:jellybeans_use_term_background_color = 1
 colorscheme jellybeans
 set cursorline
 
