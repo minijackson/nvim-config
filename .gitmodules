@@ -172,3 +172,4 @@
 [submodule "bundle/rtags"]
 	path = bundle/rtags
 	url = https://github.com/lyuts/vim-rtags.git
+	branch = master

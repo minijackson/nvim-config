@@ -161,7 +161,7 @@ nmap cof :set =(&formatoptions =~ "a") ? 'formatoptions-=a' : 'formatoptions+=a
 " }}}
 
 " Dictionaries and thesaurus {{{
-set thesaurus+=~/.nvim/thesaurus.txt
+set thesaurus+=~/.config/nvim/thesaurus.txt
 " }}}
 
 set conceallevel=2
