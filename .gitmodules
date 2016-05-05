@@ -173,3 +173,11 @@
 	path = bundle/rtags
 	url = https://github.com/lyuts/vim-rtags.git
 	branch = master
+[submodule "bundle/ref"]
+	path = bundle/ref
+	url = https://github.com/thinca/vim-ref.git
+	branch = master
+[submodule "bundle/elixir"]
+	path = bundle/elixir
+	url = https://github.com/awetzel/elixir.nvim.git
+	branch = master
