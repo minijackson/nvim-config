@@ -120,7 +120,8 @@ let g:clang_format#style_options = {
 			\ "AllowShortFunctionsOnASingleLine"     : "Empty",
 			\ "AllowShortBlocksOnASingleLine"        : "false",
 			\ "AlignConsecutiveAssignments"          : "true",
-			\ "AlignTrailingComments"                : "true"
+			\ "AlignTrailingComments"                : "true",
+			\ "ContinuationIndentWidth"              : 8
 			\ }
 
 let g:clang_format#auto_formatexpr = 1
