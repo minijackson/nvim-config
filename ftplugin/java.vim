@@ -1,1 +1,1 @@
-set omnifunc=javacomplete#Complete
+setlocal omnifunc=javacomplete#Complete

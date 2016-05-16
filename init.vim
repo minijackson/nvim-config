@@ -172,6 +172,10 @@ nmap ga <Plug>(EasyAlign)
 
 call camelcasemotion#CreateMotionMappings(g:mapleader)
 
+" Enable emmet by filetype
+let g:user_emmet_install_global = 0
+let g:user_emmet_leader_key = '<c-s>'
+
 "}}}
 
 let g:jedi#force_py_version = 3
