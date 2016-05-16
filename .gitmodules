@@ -181,3 +181,7 @@
 	path = bundle/elixir
 	url = https://github.com/awetzel/elixir.nvim.git
 	branch = master
+[submodule "bundle/emmet"]
+	path = bundle/emmet
+	url = https://github.com/mattn/emmet-vim.git
+	branch = master
