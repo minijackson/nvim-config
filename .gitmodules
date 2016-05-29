@@ -185,3 +185,7 @@
 	path = bundle/emmet
 	url = https://github.com/mattn/emmet-vim.git
 	branch = master
+[submodule "bundle/racer"]
+	path = bundle/racer
+	url = https://github.com/racer-rust/vim-racer.git
+	branch = master
