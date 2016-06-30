@@ -1,0 +1,44 @@
+#===================
+#== Documentation ==
+#===================
+
+snippet doc
+@doc ~S"""
+$1
+"""$0
+endsnippet
+
+snippet mdoc
+@moduledoc ~S"""
+$1
+"""$0
+endsnippet
+
+#=================
+#== Definitions ==
+#=================
+
+snippet defmodule
+defmodule ${1:Name} do
+  @moduledoc ~S"""
+  $2
+  """
+
+  $0
+end
+endsnippet
+
+snippet def
+@doc ~S"""
+$3
+"""
+def ${1:function}(${2:arguments}) do
+  $0
+end
+endsnippet
+
+snippet defp
+defp ${1:function}(${2:arguments}) do
+  $0
+end
+endsnippet
