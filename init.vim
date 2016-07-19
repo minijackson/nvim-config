@@ -179,3 +179,4 @@ let g:user_emmet_leader_key = '<c-s>'
 "}}}
 
 let g:jedi#force_py_version = 3
+let g:deoplete#enable_at_startup = 1

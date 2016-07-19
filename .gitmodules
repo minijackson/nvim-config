@@ -189,3 +189,19 @@
 	path = bundle/racer
 	url = https://github.com/racer-rust/vim-racer.git
 	branch = master
+[submodule "bundle/neco-ghc"]
+	path = bundle/neco-ghc
+	url = https://github.com/eagletmt/neco-ghc.git
+	branch = master
+[submodule "bundle/deoplete"]
+	path = bundle/deoplete
+	url = https://github.com/Shougo/deoplete.nvim.git
+	branch = master
+[submodule "bundle/hoogle"]
+	path = bundle/hoogle
+	url = https://github.com/Twinside/vim-hoogle.git
+	branch = master
+[submodule "bundle/hlint-refactor"]
+	path = bundle/hlint-refactor
+	url = https://github.com/mpickering/hlint-refactor-vim.git
+	branch = master
