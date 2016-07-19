@@ -41,7 +41,7 @@ endif
 
 execute pathogen#infect()
 
-let g:jellybeans_use_term_background_color = 1
+let g:jellybeans_use_term_background_color = 0
 colorscheme jellybeans
 set cursorline
 
@@ -159,6 +159,8 @@ autocmd! BufWritePost * Neomake
 " Mappings {{{
 " Toggle automatic paragraph formatting
 nmap cof :set =(&formatoptions =~ "a") ? 'formatoptions-=a' : 'formatoptions+=a'
+
+nmap ga <Plug>(EasyAlign)
 " }}}
 
 " Dictionaries and thesaurus {{{
@@ -167,8 +169,6 @@ set thesaurus+=~/.config/nvim/thesaurus.txt
 
 set conceallevel=2
 set concealcursor=nv
-
-nmap ga <Plug>(EasyAlign)
 
 call camelcasemotion#CreateMotionMappings(g:mapleader)
 
