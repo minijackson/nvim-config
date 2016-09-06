@@ -20,7 +20,7 @@ def write_docstring_args(args, snip):
     snip += ""
 
     for arg in args:
-        snip += ":{}: @todo".format(arg)
+        snip += "{}: @todo".format(arg)
 
 def write_init_body(args, parents, snip):
     parents = [p.strip() for p in parents.split(",")]
