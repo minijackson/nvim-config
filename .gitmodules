@@ -205,3 +205,7 @@
 	path = bundle/hlint-refactor
 	url = https://github.com/mpickering/hlint-refactor-vim.git
 	branch = master
+[submodule "bundle/omnisharp"]
+	path = bundle/omnisharp
+	url = https://github.com/OmniSharp/omnisharp-vim.git
+	branch = master
