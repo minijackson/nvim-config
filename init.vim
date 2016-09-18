@@ -79,6 +79,9 @@ set wildmenu
 " Search highlighting
 set hlsearch
 
+" True colors
+set termguicolors
+
 filetype plugin on
 filetype plugin indent on
 
@@ -161,6 +164,15 @@ autocmd! BufWritePost * Neomake
 nmap cof :set =(&formatoptions =~ "a") ? 'formatoptions-=a' : 'formatoptions+=a'
 
 nmap ga <Plug>(EasyAlign)
+
+" CtrlP
+let g:ctrlp_cmd = 'CtrlPMenu'
+nn <c-p>f :CtrlP<cr>
+nn <c-p>m :CtrlPMRUFiles<cr>
+nn <c-p>c :CtrlPCmdline<cr>
+nn <c-p>y :CtrlPYankring<cr>
+nn <c-p>t :CtrlPTag<cr>
+nn <c-p>f :CtrlPFunky<cr>
 " }}}
 
 " Dictionaries and thesaurus {{{
