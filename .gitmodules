@@ -205,10 +205,6 @@
 	path = bundle/omnisharp
 	url = https://github.com/OmniSharp/omnisharp-vim.git
 	branch = master
-[submodule "bundle/vifm"]
-	path = bundle/vifm
-	url = https://github.com/vifm/neovim-vifm.git
-	branch = master
 [submodule "bundle/startify"]
 	path = bundle/startify
 	url = https://github.com/mhinz/vim-startify.git
