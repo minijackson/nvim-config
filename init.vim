@@ -166,8 +166,11 @@ nmap cof :set =(&formatoptions =~ "a") ? 'formatoptions-=a' : 'formatoptions+=a
 nmap ga <Plug>(EasyAlign)
 
 " CtrlP
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
 let g:ctrlp_cmd = 'CtrlPMenu'
-nn <c-p>f :CtrlP<cr>
+nn <c-p>p :CtrlP<cr>
+nn <c-p><c-p> :CtrlP<cr>
 nn <c-p>m :CtrlPMRUFiles<cr>
 nn <c-p>c :CtrlPCmdline<cr>
 nn <c-p>y :CtrlPYankring<cr>
