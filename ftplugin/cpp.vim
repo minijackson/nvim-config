@@ -2,8 +2,8 @@ setlocal completefunc=syntaxcomplete#Complete
 setlocal colorcolumn=100
 setlocal foldmethod=marker
 
-let g:clang_use_library=1
-let g:clang_cpp_options = '-std=c++14'
+let g:deoplete#sources#clang#libclang_path = '/usr/lib64/libclang.so'
+let g:deoplete#sources#clang#clang_header = '/usr/include'
 
 let g:neomake_cpp_enabled_makers = ["clang"]
 

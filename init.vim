@@ -32,6 +32,9 @@ set showcmd    " Show (partial) command in status line.
 set autowrite  " Automatically save before commands like :next and :make
 set autoread
 
+" Don't delete buffer when abandoned
+set hidden
+
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
