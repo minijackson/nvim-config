@@ -7,3 +7,14 @@ let g:LatexBox_latexmk_async = 1
 let g:tex_flavor='latex'
 let g:tex_verbspell=1
 let g:tex_conceal = ''
+
+if !exists('g:deoplete#omni#input_patterns')
+	let g:deoplete#omni#input_patterns = {}
+endif
+let g:deoplete#omni#input_patterns.tex = 
+			\   '\\(?:'
+			\  .   '\w*cite\w*(?:\s*\[[^]]*\]){0,2}\s*{[^}]*'
+			\  .  '|\w*ref(?:\s*\{[^}]*|range\s*\{[^,}]*(?:}{)?)'
+			\  .  '|\w*begin\s*\{[^}]*'
+			\  .  '|\w*end\s*\{[^}]*'
+			\  .')'

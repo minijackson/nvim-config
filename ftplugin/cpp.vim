@@ -3,7 +3,7 @@ setlocal colorcolumn=100
 setlocal foldmethod=marker
 
 let g:deoplete#sources#clang#libclang_path = '/usr/lib64/libclang.so'
-let g:deoplete#sources#clang#clang_header = '/usr/include'
+let g:deoplete#sources#clang#clang_header = '/usr/lib64/clang/3.9.0/include'
 
 let g:neomake_cpp_enabled_makers = ["clang"]
 

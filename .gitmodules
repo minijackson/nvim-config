@@ -233,3 +233,15 @@
 	path = bundle/neoinclude
 	url = https://github.com/Shougo/neoinclude.vim.git
 	branch = master
+[submodule "bundle/deoplete-go"]
+	path = bundle/deoplete-go
+	url = https://github.com/zchee/deoplete-go.git
+	branch = master
+[submodule "bundle/deoplete-padawan"]
+	path = bundle/deoplete-padawan
+	url = https://github.com/pbogut/deoplete-padawan.git
+	branch = master
+[submodule "bundle/ensime"]
+	path = bundle/ensime
+	url = https://github.com/ensime/ensime-vim.git
+	branch = master
