@@ -13,7 +13,8 @@ if !exists('g:deoplete#omni#input_patterns')
 endif
 let g:deoplete#omni#input_patterns.tex = 
 			\   '\\(?:'
-			\  .   '\w*cite\w*(?:\s*\[[^]]*\]){0,2}\s*{[^}]*'
+			\  .   '[^ {[]*'
+			\  .  '|\w*cite\w*(?:\s*\[[^]]*\]){0,2}\s*{[^}]*'
 			\  .  '|\w*ref(?:\s*\{[^}]*|range\s*\{[^,}]*(?:}{)?)'
 			\  .  '|\w*begin\s*\{[^}]*'
 			\  .  '|\w*end\s*\{[^}]*'
