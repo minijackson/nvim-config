@@ -165,10 +165,6 @@
 	path = bundle/ref
 	url = https://github.com/thinca/vim-ref.git
 	branch = master
-[submodule "bundle/elixir"]
-	path = bundle/elixir
-	url = https://github.com/awetzel/elixir.nvim.git
-	branch = master
 [submodule "bundle/emmet"]
 	path = bundle/emmet
 	url = https://github.com/mattn/emmet-vim.git
@@ -244,4 +240,24 @@
 [submodule "bundle/ensime"]
 	path = bundle/ensime
 	url = https://github.com/ensime/ensime-vim.git
+	branch = master
+[submodule "bundle/elixir-snippets"]
+	path = bundle/elixir-snippets
+	url = https://github.com/carlosgaldino/elixir-snippets.git
+	branch = master
+[submodule "bundle/alchemist"]
+	path = bundle/alchemist
+	url = https://github.com/slashmili/alchemist.vim.git
+	branch = master
+[submodule "bundle/gutentags"]
+	path = bundle/gutentags
+	url = https://github.com/ludovicchabant/vim-gutentags.git
+	branch = master
+[submodule "bundle/projectionist"]
+	path = bundle/projectionist
+	url = https://github.com/tpope/vim-projectionist.git
+	branch = master
+[submodule "bundle/phoenix"]
+	path = bundle/phoenix
+	url = https://github.com/c-brenn/phoenix.vim.git
 	branch = master

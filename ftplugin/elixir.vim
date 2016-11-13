@@ -23,6 +23,8 @@ let g:tagbar_type_elixir = {
 			\ }
 		\ }
 
+let g:alchemist#elixir_erlang_src = '/usr/local/src'
+
 " ~/.ctags config for elixir
 " thx https://github.com/mmorearty/elixir-ctags
 "
