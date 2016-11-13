@@ -2,9 +2,31 @@ setlocal completefunc=syntaxcomplete#Complete
 setlocal colorcolumn=100
 setlocal foldmethod=marker
 
+" Deoplete-Clang
 let g:deoplete#sources#clang#libclang_path = '/usr/lib64/libclang.so'
 let g:deoplete#sources#clang#clang_header = '/usr/lib64/clang/3.9.0/include'
 
+" Rtags (+ deoplete)
+setlocal omnifunc=RtagsCompleteFunc
+
+if !exists('g:deoplete#omni#functions')
+	let g:deoplete#omni#functions = {}
+endif
+let g:deoplete#omni#functions.cpp = [
+			\ 'RtagsCompleteFunc',
+			\ 'ccomplete#Complete',
+			\ ]
+
+if !exists('g:deoplete#omni#input_patterns')
+	let g:deoplete#omni#input_patterns = {}
+endif
+let g:deoplete#omni#input_patterns.cpp = [
+			\ '[^. *\t]\.\w*',
+			\ '[^. *\t]->\w*',
+			\ '[\w>]*::\w*',
+			\ ]
+
+" Neomake
 let g:neomake_cpp_enabled_makers = ["clang"]
 
 if neomake#utils#Exists('clang-tidy')
