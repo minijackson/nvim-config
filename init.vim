@@ -61,6 +61,8 @@ set smartcase
 
 set backspace=indent,eol,start
 
+set completeopt=menuone,preview,noinsert
+
 " Line wrapping
 set nowrap
 
@@ -81,6 +83,9 @@ set wildmenu
 
 " Search highlighting
 set hlsearch
+" Show effect of command incrementally
+" (Only for substitution for now)
+set inccommand=nosplit
 
 " True colors
 set termguicolors
@@ -198,3 +203,4 @@ let g:user_emmet_leader_key = '<c-s>'
 
 let g:jedi#force_py_version = 3
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#max_menu_width = 100

@@ -221,10 +221,6 @@
 	path = bundle/deoplete-ternjs
 	url = https://github.com/carlitux/deoplete-ternjs.git
 	branch = master
-[submodule "bundle/deoplete-clang"]
-	path = bundle/deoplete-clang
-	url = https://github.com/zchee/deoplete-clang.git
-	branch = master
 [submodule "bundle/neoinclude"]
 	path = bundle/neoinclude
 	url = https://github.com/Shougo/neoinclude.vim.git
@@ -260,4 +256,16 @@
 [submodule "bundle/phoenix"]
 	path = bundle/phoenix
 	url = https://github.com/c-brenn/phoenix.vim.git
+	branch = master
+[submodule "bundle/denite"]
+	path = bundle/denite
+	url = https://github.com/Shougo/denite.nvim.git
+	branch = master
+[submodule "bundle/prolog"]
+	path = bundle/prolog
+	url = https://github.com/adimit/prolog.vim.git
+	branch = master
+[submodule "bundle/vim-clang"]
+	path = bundle/vim-clang
+	url = https://github.com/justmao945/vim-clang.git
 	branch = master

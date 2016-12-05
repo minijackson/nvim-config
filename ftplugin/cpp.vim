@@ -6,6 +6,12 @@ setlocal foldmethod=marker
 let g:deoplete#sources#clang#libclang_path = '/usr/lib64/libclang.so'
 let g:deoplete#sources#clang#clang_header = '/usr/lib64/clang/3.9.0/include'
 
+" Vim-clang
+let g:clang_use_library = 1
+let g:clang_cpp_options = '-std=c++1z'
+let g:clang_cpp_completeopt = 'menuone,preview,noinsert'
+let g:clang_auto = 0
+
 " Rtags (+ deoplete)
 setlocal omnifunc=RtagsCompleteFunc
 
@@ -13,7 +19,7 @@ if !exists('g:deoplete#omni#functions')
 	let g:deoplete#omni#functions = {}
 endif
 let g:deoplete#omni#functions.cpp = [
-			\ 'RtagsCompleteFunc',
+			\ 'ClangComplete',
 			\ 'ccomplete#Complete',
 			\ ]
 
