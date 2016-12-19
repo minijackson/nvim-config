@@ -60,4 +60,4 @@ let g:neomake_cpp_gcc_maker = {
 				\ ]
 			\ }
 
-let g:neomake_cpp_clangtidy_args = ["--checks=*", "%:p", "--", "-std=c++14", "-Wall", "-Wextra"]
+let g:neomake_cpp_clangtidy_args = ["--checks=*,-llvm-namespace-comment,-google-readability-namespace-comments,-clang-diagnostic-pragma-once-outside-header", "%:p", "--", "-std=c++14", "-Wall", "-Wextra"]
