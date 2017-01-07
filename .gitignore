@@ -1,7 +1,16 @@
 tags
+tags.*
 /undo
 *.pyc
 shada
+
+# Dein.vim
+/repos
+!/repos/github.com/Shougo/dein.vim
+
+/.cache
+/cache_nvim
+/state_nvim.vim
 
 # Created by https://www.gitignore.io
 

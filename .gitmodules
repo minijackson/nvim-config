@@ -269,3 +269,6 @@
 	path = bundle/vim-clang
 	url = https://github.com/justmao945/vim-clang.git
 	branch = master
+[submodule "repos/github.com/Shougo/dein.vim"]
+	path = repos/github.com/Shougo/dein.vim
+	url = https://github.com/Shougo/dein.vim.git

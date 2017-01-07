@@ -37,12 +37,150 @@ set hidden
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
-  source /etc/vim/vimrc.local
+	source /etc/vim/vimrc.local
 endif
 
-" Personnal configuration {{{
+" Dein configuration {{{
 
-execute pathogen#infect()
+" Required:
+set runtimepath+=/home/minijackson/.config/nvim/repos/github.com/Shougo/dein.vim
+
+" Required:
+if dein#load_state(expand('~/.config/nvim'))
+	call dein#begin(expand('~/.config/nvim'))
+
+	" Let dein manage dein
+	" Required:
+	call dein#add(expand('~/.config/nvim/repos/github.com/Shougo/dein.vim'))
+
+	" Coloschemes
+	call dein#add('tomasr/molokai')
+	call dein#add('nanotech/jellybeans.vim')
+	call dein#add('micha/wombat256')
+	call dein#add('joshdick/onedark.vim')
+
+	" UI
+	call dein#add('bling/vim-airline')
+	call dein#add('vim-airline/vim-airline-themes')
+	call dein#add('airblade/vim-gitgutter')
+	call dein#add('gorodinskiy/vim-coloresque')
+	call dein#add('kien/rainbow_parentheses.vim')
+	call dein#add('powerman/vim-plugin-AnsiEsc')
+	call dein#add('majutsushi/tagbar')
+	call dein#add('mbbill/undotree')
+
+	" Motions
+	call dein#add('vim-scripts/matchit.zip')
+	call dein#add('tpope/vim-surround')
+	call dein#add('tommcdo/vim-exchange')
+	call dein#add('bkad/CamelCaseMotion')
+	call dein#add('tpope/vim-repeat')
+	call dein#add('junegunn/vim-easy-align')
+	call dein#add('justinmk/vim-dirvish')
+	call dein#add('mhinz/vim-startify')
+
+	" Languages
+	call dein#add('sheerun/vim-polyglot')
+	call dein#add('lyuts/vim-rtags')
+	call dein#add('ludovicchabant/vim-gutentags')
+
+	" CSV
+	call dein#add('chrisbra/csv.vim')
+
+	" JavaScript
+	call dein#add('myhere/vim-nodejs-complete')
+	call dein#add('moll/vim-node')
+	call dein#add('carlitux/deoplete-ternjs')
+
+	" Java
+	call dein#add('artur-shaik/vim-javacomplete2')
+
+	" R
+	call dein#add('jalvesaq/Nvim-R')
+
+	" Go
+	call dein#add('fatih/vim-go')
+	call dein#add('zchee/deoplete-go')
+
+	" Rust
+	call dein#add('racer-rust/vim-racer')
+
+	" Lisp
+	call dein#add('kovisoft/slimv')
+
+	" Haskell
+	call dein#add('eagletmt/neco-ghc')
+	call dein#add('Twinside/vim-hoogle')
+	call dein#add('mpickering/hlint-refactor-vim')
+
+	" C#
+	call dein#add('OmniSharp/omnisharp-vim')
+
+	" HTML
+	call dein#add('mattn/emmet-vim')
+
+	" Python
+	call dein#add('zchee/deoplete-jedi')
+
+	" Elixir
+	call dein#add('slashmili/alchemist.vim')
+	call dein#add('c-brenn/phoenix.vim')
+	call dein#add('carlosgaldino/elixir-snippets')
+
+	" PHP
+	call dein#add('pbogut/deoplete-padawan')
+
+	" C / C++
+	call dein#add('Shougo/neoinclude.vim')
+	call dein#add('justmao945/vim-clang')
+	call dein#add('rhysd/vim-clang-format')
+
+	" Scala
+	call dein#add('ensime/ensime-vim')
+
+	" Prolog
+	call dein#add('adimit/prolog.vim')
+
+	" EditorConfig
+	call dein#add('editorconfig/editorconfig-vim')
+
+	" Frameworks
+	call dein#add('tpope/vim-projectionist')
+	call dein#add('Shougo/deoplete.nvim')
+	call dein#add('Shougo/denite.nvim')
+	call dein#add('ctrlpvim/ctrlp.vim')
+	call dein#add('tacahiroy/ctrlp-funky')
+	call dein#add('sgur/ctrlp-extensions.vim')
+	call dein#add('Shougo/dein.vim')
+	call dein#add('benekastah/neomake')
+	call dein#add('kana/vim-operator-user')
+	call dein#add('SirVer/ultisnips')
+
+	" Utility
+	call dein#add('tpope/vim-fugitive')
+	call dein#add('tpope/vim-unimpaired')
+	call dein#add('rhysd/vim-grammarous')
+	call dein#add('vim-scripts/SyntaxRange')
+	call dein#add('scrooloose/nerdcommenter')
+	call dein#add('tmux-plugins/vim-tmux-focus-events')
+	call dein#add('tpope/vim-rhubarb')
+	call dein#add('mattn/gist-vim')
+	call dein#add('mattn/webapi-vim')
+	call dein#add('thinca/vim-ref')
+
+	" Required:
+	call dein#end()
+	call dein#save_state()
+endif
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
+
+" }}}
+
+" Personnal configuration {{{
 
 let g:jellybeans_use_term_background_color = 0
 colorscheme jellybeans
@@ -89,9 +227,6 @@ set inccommand=nosplit
 
 " True colors
 set termguicolors
-
-filetype plugin on
-filetype plugin indent on
 
 let g:maplocalleader=","
 let g:mapleader=";"
