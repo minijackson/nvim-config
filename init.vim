@@ -84,65 +84,65 @@ if dein#load_state(expand('~/.config/nvim'))
 	call dein#add('lyuts/vim-rtags')
 	call dein#add('ludovicchabant/vim-gutentags')
 
-	" CSV
-	call dein#add('chrisbra/csv.vim')
+		" CSV
+		call dein#add('chrisbra/csv.vim')
 
-	" JavaScript
-	call dein#add('myhere/vim-nodejs-complete')
-	call dein#add('moll/vim-node')
-	call dein#add('carlitux/deoplete-ternjs')
+		" JavaScript
+		call dein#add('myhere/vim-nodejs-complete')
+		call dein#add('moll/vim-node')
+		call dein#add('carlitux/deoplete-ternjs')
 
-	" Java
-	call dein#add('artur-shaik/vim-javacomplete2')
+		" Java
+		call dein#add('artur-shaik/vim-javacomplete2')
 
-	" R
-	call dein#add('jalvesaq/Nvim-R')
+		" R
+		call dein#add('jalvesaq/Nvim-R')
 
-	" Go
-	call dein#add('fatih/vim-go')
-	call dein#add('zchee/deoplete-go')
+		" Go
+		call dein#add('fatih/vim-go')
+		call dein#add('zchee/deoplete-go')
 
-	" Rust
-	call dein#add('racer-rust/vim-racer')
+		" Rust
+		call dein#add('racer-rust/vim-racer', {'on_ft': 'rust'})
 
-	" Lisp
-	call dein#add('kovisoft/slimv')
+		" Lisp
+		call dein#add('kovisoft/slimv')
 
-	" Haskell
-	call dein#add('eagletmt/neco-ghc')
-	call dein#add('Twinside/vim-hoogle')
-	call dein#add('mpickering/hlint-refactor-vim')
+		" Haskell
+		call dein#add('eagletmt/neco-ghc')
+		call dein#add('Twinside/vim-hoogle')
+		call dein#add('mpickering/hlint-refactor-vim')
 
-	" C#
-	call dein#add('OmniSharp/omnisharp-vim')
+		" C#
+		call dein#add('OmniSharp/omnisharp-vim')
 
-	" HTML
-	call dein#add('mattn/emmet-vim')
+		" HTML
+		call dein#add('mattn/emmet-vim')
 
-	" Python
-	call dein#add('zchee/deoplete-jedi')
+		" Python
+		call dein#add('zchee/deoplete-jedi')
 
-	" Elixir
-	call dein#add('slashmili/alchemist.vim')
-	call dein#add('c-brenn/phoenix.vim')
-	call dein#add('carlosgaldino/elixir-snippets')
+		" Elixir
+		call dein#add('slashmili/alchemist.vim')
+		call dein#add('c-brenn/phoenix.vim')
+		call dein#add('carlosgaldino/elixir-snippets')
 
-	" PHP
-	call dein#add('pbogut/deoplete-padawan')
+		" PHP
+		call dein#add('pbogut/deoplete-padawan')
 
-	" C / C++
-	call dein#add('Shougo/neoinclude.vim')
-	call dein#add('justmao945/vim-clang')
-	call dein#add('rhysd/vim-clang-format')
+		" C / C++
+		call dein#add('Shougo/neoinclude.vim')
+		call dein#add('justmao945/vim-clang')
+		call dein#add('rhysd/vim-clang-format')
 
-	" Scala
-	call dein#add('ensime/ensime-vim')
+		" Scala
+		call dein#add('ensime/ensime-vim')
 
-	" Prolog
-	call dein#add('adimit/prolog.vim')
+		" Prolog
+		call dein#add('adimit/prolog.vim')
 
-	" EditorConfig
-	call dein#add('editorconfig/editorconfig-vim')
+		" EditorConfig
+		call dein#add('editorconfig/editorconfig-vim')
 
 	" Frameworks
 	call dein#add('tpope/vim-projectionist')
