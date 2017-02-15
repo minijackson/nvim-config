@@ -25,6 +25,8 @@ let g:tagbar_type_elixir = {
 
 let g:alchemist#elixir_erlang_src = '/usr/local/src'
 
+let g:neomake_elixir_enabled_makers = ['mix', 'credo']
+
 " ~/.ctags config for elixir
 " thx https://github.com/mmorearty/elixir-ctags
 "
