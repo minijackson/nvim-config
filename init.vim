@@ -18,7 +18,6 @@ runtime! debian.vim
 "set compatible
 
 syntax on
-set background=dark
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
@@ -55,9 +54,11 @@ if dein#load_state(expand('~/.config/nvim'))
 
 	" Coloschemes
 	call dein#add('tomasr/molokai')
-	call dein#add('nanotech/jellybeans.vim')
 	call dein#add('micha/wombat256')
-	call dein#add('joshdick/onedark.vim')
+	call dein#add('rakr/vim-one')
+	call dein#add('mhartington/oceanic-next')
+	call dein#add('morhetz/gruvbox')
+	call dein#add('w0ng/vim-hybrid')
 
 	" UI
 	call dein#add('bling/vim-airline')
@@ -66,7 +67,7 @@ if dein#load_state(expand('~/.config/nvim'))
 	call dein#add('gorodinskiy/vim-coloresque')
 	call dein#add('kien/rainbow_parentheses.vim')
 	call dein#add('powerman/vim-plugin-AnsiEsc')
-	call dein#add('majutsushi/tagbar')
+	"call dein#add('majutsushi/tagbar')
 	call dein#add('mbbill/undotree')
 
 	" Motions
@@ -155,6 +156,7 @@ if dein#load_state(expand('~/.config/nvim'))
 	call dein#add('benekastah/neomake')
 	call dein#add('kana/vim-operator-user')
 	call dein#add('SirVer/ultisnips')
+	call dein#add('tjdevries/nvim-langserver-shim')
 
 	" Utility
 	call dein#add('tpope/vim-fugitive')
@@ -167,6 +169,8 @@ if dein#load_state(expand('~/.config/nvim'))
 	call dein#add('mattn/gist-vim')
 	call dein#add('mattn/webapi-vim')
 	call dein#add('thinca/vim-ref')
+
+	call dein#remote_plugins()
 
 	" Required:
 	call dein#end()
@@ -182,8 +186,23 @@ endif
 
 " Personnal configuration {{{
 
-let g:jellybeans_use_term_background_color = 0
-colorscheme jellybeans
+	" Color scheme {{{
+
+	set background=dark
+
+	" Jelly beans
+	let g:jellybeans_use_term_background_color = 0
+	let g:jellybeans_use_term_italics = 1
+
+	" Gruvbox
+	let g:gruvbox_contrast_dark = 'medium'
+
+	"colorscheme gruvbox
+
+	colorscheme hybrid
+	let g:airline_theme = 'lucius'
+	" }}}
+
 set cursorline
 
 set backup
@@ -207,6 +226,8 @@ set nowrap
 " Status Line
 set laststatus=2
 
+set title
+
 " Status line
 set statusline=%F%m%r%h%w\ [%{getcwd()}]\ [%p%%]%=[FORMAT=%{&ff}/%Y]\ [POS=%l,%v]\ (%{strftime(\"%d/%m/%y\ -\ %H:%M\")})
 
@@ -228,18 +249,15 @@ set inccommand=nosplit
 " True colors
 set termguicolors
 
+" Reset the cursor before leaving
+autocmd VimLeave * let &t_SI = "\<Esc>[1 q"
+
 let g:maplocalleader=","
 let g:mapleader=";"
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<C-k>"
 let g:UltiSnipsJumpBackwardTrigger="<C-j>"
-
-" Update tags when writing C/C++ file
-function! UpdateTags()
-	let cmd = 'ctags -R --c++-kinds=+p --fields=+iaS --extra=+q'
-	let resp = system(cmd)
-endfunction
 
 " Clang-Format options
 let g:clang_format#code_style = "mozilla"
@@ -336,6 +354,7 @@ let g:user_emmet_leader_key = '<c-s>'
 
 "}}}
 
+let g:startify_fortune_use_unicode = 1
 let g:jedi#force_py_version = 3
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#max_menu_width = 100
