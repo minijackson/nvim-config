@@ -134,7 +134,6 @@ if dein#load_state(expand('~/.config/nvim'))
 		" C / C++
 		call dein#add('Shougo/neoinclude.vim')
 		call dein#add('justmao945/vim-clang')
-		call dein#add('rhysd/vim-clang-format')
 
 		" Scala
 		call dein#add('ensime/ensime-vim')
@@ -169,6 +168,7 @@ if dein#load_state(expand('~/.config/nvim'))
 	call dein#add('mattn/gist-vim')
 	call dein#add('mattn/webapi-vim')
 	call dein#add('thinca/vim-ref')
+	call dein#add('sbdchd/neoformat')
 
 	call dein#remote_plugins()
 
@@ -260,37 +260,36 @@ let g:UltiSnipsJumpForwardTrigger="<C-k>"
 let g:UltiSnipsJumpBackwardTrigger="<C-j>"
 
 " Clang-Format options
-let g:clang_format#code_style = "mozilla"
-let g:clang_format#style_options = {
-			\ "BasedOnStyle"                         : "Mozilla",
-			\ "ColumnLimit"                          : 100,
-			\ "TabWidth"                             : 4,
-			\ "IndentWidth"                          : 4,
-			\ "UseTab"                               : "ForIndentation",
-			\ "SpaceBeforeParens"                    : "Never",
-			\ "BreakBeforeBraces"                    : "Attach",
-			\ "Standard"                             : "Cpp11",
-			\ "Cpp11BracedListStyle"                 : "true",
-			\ "NamespaceIndentation"                 : "All",
-			\ "ConstructorInitializerIndentWidth"    : 6,
-			\ "AccessModifierOffset"                 : -4,
-			\ "DerivePointerAlignment"               : "false",
-			\ "PointerAlignment"                     : "Left",
-			\ "AlwaysBreakTemplateDeclarations"      : "true",
-			\ "AlwaysBreakAfterDefinitionReturnType" : "None",
-			\ "BinPackArguments"                     : "false",
-			\ "BinPackParameters"                    : "false",
-			\ "PenaltyBreakBeforeFirstCallParameter" : 2,
-			\ "AllowShortFunctionsOnASingleLine"     : "Empty",
-			\ "AllowShortBlocksOnASingleLine"        : "false",
-			\ "AlignConsecutiveAssignments"          : "true",
-			\ "AlignTrailingComments"                : "true",
-			\ "ContinuationIndentWidth"              : 8
-			\ }
+" let g:clang_format#code_style = "mozilla"
+" let g:clang_format#style_options = {
+" 			\ "BasedOnStyle"                         : "Mozilla",
+" 			\ "ColumnLimit"                          : 100,
+" 			\ "TabWidth"                             : 4,
+" 			\ "IndentWidth"                          : 4,
+" 			\ "UseTab"                               : "ForIndentation",
+" 			\ "SpaceBeforeParens"                    : "Never",
+" 			\ "BreakBeforeBraces"                    : "Attach",
+" 			\ "Standard"                             : "Cpp11",
+" 			\ "Cpp11BracedListStyle"                 : "true",
+" 			\ "NamespaceIndentation"                 : "All",
+" 			\ "ConstructorInitializerIndentWidth"    : 6,
+" 			\ "AccessModifierOffset"                 : -4,
+" 			\ "DerivePointerAlignment"               : "false",
+" 			\ "PointerAlignment"                     : "Left",
+" 			\ "AlwaysBreakTemplateDeclarations"      : "true",
+" 			\ "AlwaysBreakAfterDefinitionReturnType" : "None",
+" 			\ "BinPackArguments"                     : "false",
+" 			\ "BinPackParameters"                    : "false",
+" 			\ "PenaltyBreakBeforeFirstCallParameter" : 2,
+" 			\ "AllowShortFunctionsOnASingleLine"     : "Empty",
+" 			\ "AllowShortBlocksOnASingleLine"        : "false",
+" 			\ "AlignConsecutiveAssignments"          : "true",
+" 			\ "AlignTrailingComments"                : "true",
+" 			\ "ContinuationIndentWidth"              : 8
+" 			\ }
 
-let g:clang_format#auto_formatexpr = 1
-
-autocmd FileType c,cpp map <buffer><LocalLeader>f <Plug>(operator-clang-format)
+" Neoformat
+map <silent> <buffer> <LocalLeader>f :Neoformat<cr>
 
 " Enabling cscopes
 set cscopetag cscopeverbose
