@@ -28,6 +28,7 @@ filetype plugin indent on
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
 set showcmd    " Show (partial) command in status line.
+set noshowmode    " Do not show -- INSERTION -- in the cmdline (airline does it)
 set autowrite  " Automatically save before commands like :next and :make
 set autoread
 
@@ -42,7 +43,7 @@ endif
 " Dein configuration {{{
 
 " Required:
-set runtimepath+=/home/minijackson/.config/nvim/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.config/nvim/repos/github.com/Shougo/dein.vim
 
 " Required:
 if dein#load_state(expand('~/.config/nvim'))
@@ -51,6 +52,9 @@ if dein#load_state(expand('~/.config/nvim'))
 	" Let dein manage dein
 	" Required:
 	call dein#add(expand('~/.config/nvim/repos/github.com/Shougo/dein.vim'))
+
+	" System config / plugins
+	set runtimepath+=/usr/share/vim/vimfiles
 
 	" Coloschemes
 	call dein#add('tomasr/molokai')
@@ -69,12 +73,14 @@ if dein#load_state(expand('~/.config/nvim'))
 	call dein#add('powerman/vim-plugin-AnsiEsc')
 	"call dein#add('majutsushi/tagbar')
 	call dein#add('mbbill/undotree')
+	call dein#add('Shougo/echodoc.vim')
 
 	" Motions
 	call dein#add('vim-scripts/matchit.zip')
 	call dein#add('tpope/vim-surround')
 	call dein#add('tommcdo/vim-exchange')
 	call dein#add('bkad/CamelCaseMotion')
+	call dein#add('wellle/targets.vim')
 	call dein#add('tpope/vim-repeat')
 	call dein#add('junegunn/vim-easy-align')
 	call dein#add('justinmk/vim-dirvish')
@@ -83,7 +89,8 @@ if dein#load_state(expand('~/.config/nvim'))
 	" Languages
 	call dein#add('sheerun/vim-polyglot')
 	call dein#add('lyuts/vim-rtags')
-	call dein#add('ludovicchabant/vim-gutentags')
+	"call dein#add('ludovicchabant/vim-gutentags')
+	"call dein#add('igankevich/mesonic')
 
 		" CSV
 		call dein#add('chrisbra/csv.vim')
@@ -129,7 +136,7 @@ if dein#load_state(expand('~/.config/nvim'))
 		call dein#add('carlosgaldino/elixir-snippets')
 
 		" PHP
-		call dein#add('pbogut/deoplete-padawan')
+		call dein#add('pbogut/deoplete-padawan', {'on_ft': 'php', 'build': 'composer install'})
 
 		" C / C++
 		call dein#add('Shougo/neoinclude.vim')
@@ -144,6 +151,10 @@ if dein#load_state(expand('~/.config/nvim'))
 		" EditorConfig
 		call dein#add('editorconfig/editorconfig-vim')
 
+		" RFC
+		call dein#add('mhinz/vim-rfc')
+		call dein#add('vim-scripts/rfc-syntax')
+
 	" Frameworks
 	call dein#add('tpope/vim-projectionist')
 	call dein#add('Shougo/deoplete.nvim')
@@ -155,7 +166,7 @@ if dein#load_state(expand('~/.config/nvim'))
 	call dein#add('benekastah/neomake')
 	call dein#add('kana/vim-operator-user')
 	call dein#add('SirVer/ultisnips')
-	call dein#add('tjdevries/nvim-langserver-shim')
+	call dein#add('autozimu/LanguageClient-neovim')
 
 	" Utility
 	call dein#add('tpope/vim-fugitive')
@@ -218,7 +229,7 @@ set smartcase
 
 set backspace=indent,eol,start
 
-set completeopt=menuone,preview,noinsert
+set completeopt=menuone,preview,noinsert,noselect
 
 " Line wrapping
 set nowrap
@@ -244,7 +255,7 @@ set wildmenu
 set hlsearch
 " Show effect of command incrementally
 " (Only for substitution for now)
-set inccommand=nosplit
+set inccommand=split
 
 " True colors
 set termguicolors
@@ -355,5 +366,6 @@ let g:user_emmet_leader_key = '<c-s>'
 
 let g:startify_fortune_use_unicode = 1
 let g:jedi#force_py_version = 3
+let g:echodoc#enable_at_startup = 1
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#max_menu_width = 100

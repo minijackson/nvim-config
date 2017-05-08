@@ -1,6 +1,6 @@
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+RainbowParenthesesToggle
+RainbowParenthesesLoadRound
+RainbowParenthesesLoadSquare
+RainbowParenthesesLoadBraces
 
 RainbowParenthesesActivate

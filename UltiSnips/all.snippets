@@ -47,6 +47,6 @@ if remainingSpace % 2 == 1:
 	whitespaceEnd += " "
 
 snip += getCommentBegin() + "==" + whitespaceBegin
-`$1`!p snip.rv = getCommentEnd() + whitespaceEnd + "=="`
+`$1`!p snip.rv = whitespaceEnd + "==" + getCommentEnd() `
 `!p snip.rv = comment("=" * commentLessMaxWidth)`
 endsnippet

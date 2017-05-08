@@ -8,6 +8,8 @@ let g:tex_flavor='latex'
 let g:tex_verbspell=1
 let g:tex_conceal = ''
 
+setlocal conceallevel=0
+
 if !exists('g:deoplete#omni#input_patterns')
 	let g:deoplete#omni#input_patterns = {}
 endif
