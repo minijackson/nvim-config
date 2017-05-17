@@ -102,6 +102,11 @@ if dein#load_state(expand('~/.config/nvim'))
 
 		" Java
 		call dein#add('artur-shaik/vim-javacomplete2')
+		"call dein#add('ervandew/eclim',
+					"\ { 'build':
+					"\     'ant -Declipse.home=' . $ECLIPSE_PATH .
+					"\     ' -Dvim.files=' . escape(expand('~/.config/nvim/.cache/init.vim/.dein/'), '')
+					"\ } )
 
 		" R
 		call dein#add('jalvesaq/Nvim-R')
@@ -109,6 +114,9 @@ if dein#load_state(expand('~/.config/nvim'))
 		" Go
 		call dein#add('fatih/vim-go')
 		call dein#add('zchee/deoplete-go')
+
+		" Rust
+		call dein#add('racer-rust/vim-racer', {'on_ft': 'rust'})
 
 		" Rust
 		call dein#add('racer-rust/vim-racer', {'on_ft': 'rust'})
@@ -201,10 +209,6 @@ endif
 
 	set background=dark
 
-	" Jelly beans
-	let g:jellybeans_use_term_background_color = 0
-	let g:jellybeans_use_term_italics = 1
-
 	" Gruvbox
 	let g:gruvbox_contrast_dark = 'medium'
 
@@ -260,17 +264,16 @@ set inccommand=split
 " True colors
 set termguicolors
 
+set guicursor=n-v:block,i-c-ci-ve:ver25,r-cr:hor20,o:hor50
+			\,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
+			\,sm:block-blinkwait175-blinkoff150-blinkon175
+
 " Reset the cursor before leaving
 autocmd VimLeave * let &t_SI = "\<Esc>[1 q"
 
 let g:maplocalleader=","
 let g:mapleader=";"
 
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<C-k>"
-let g:UltiSnipsJumpBackwardTrigger="<C-j>"
-
-" Clang-Format options
 " let g:clang_format#code_style = "mozilla"
 " let g:clang_format#style_options = {
 " 			\ "BasedOnStyle"                         : "Mozilla",
