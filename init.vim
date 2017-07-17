@@ -191,6 +191,8 @@ if dein#load_state(expand('~/.config/nvim'))
 	call dein#add('thinca/vim-ref')
 	call dein#add('sbdchd/neoformat')
 	call dein#add('blueyed/vim-diminactive')
+	call dein#add('mhinz/vim-grepper')
+	call dein#add('nelstrom/vim-visual-star-search')
 
 	call dein#remote_plugins()
 
@@ -343,7 +345,10 @@ nmap =of :set =(&formatoptions =~ "a") ? 'formatoptions-=a' : 'formatoptions+=a
 nmap ga <Plug>(EasyAlign)
 
 " CtrlP
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+"let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+let g:ctrlp_use_caching = 0
+let g:ctrlp_match_window_reversed = 0
 
 let g:ctrlp_cmd = 'CtrlPMenu'
 nn <c-p>p :CtrlP<cr>
@@ -363,6 +368,11 @@ call camelcasemotion#CreateMotionMappings(g:mapleader)
 " Enable emmet by filetype
 let g:user_emmet_install_global = 0
 let g:user_emmet_leader_key = '<c-s>'
+
+" Grepper plugin config
+let g:grepper = {
+			\  'tools': ['rg', 'ag', 'git']
+			\ }
 
 "}}}
 
