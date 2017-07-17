@@ -112,8 +112,8 @@ if dein#load_state(expand('~/.config/nvim'))
 		call dein#add('jalvesaq/Nvim-R')
 
 		" Go
-		call dein#add('fatih/vim-go')
-		call dein#add('zchee/deoplete-go')
+		call dein#add('fatih/vim-go', {'on_ft': 'go'})
+		call dein#add('zchee/deoplete-go', {'on_ft': 'go'})
 
 		" Rust
 		call dein#add('racer-rust/vim-racer', {'on_ft': 'rust'})
@@ -125,12 +125,12 @@ if dein#load_state(expand('~/.config/nvim'))
 		call dein#add('kovisoft/slimv')
 
 		" Haskell
-		call dein#add('eagletmt/neco-ghc')
-		call dein#add('Twinside/vim-hoogle')
-		call dein#add('mpickering/hlint-refactor-vim')
+		call dein#add('eagletmt/neco-ghc', {'on_ft': 'haskell'})
+		call dein#add('Twinside/vim-hoogle', {'on_ft': 'haskell'})
+		call dein#add('mpickering/hlint-refactor-vim', {'on_ft': 'haskell'})
 
 		" C#
-		call dein#add('OmniSharp/omnisharp-vim')
+		call dein#add('OmniSharp/omnisharp-vim', {'on_ft': 'cs'})
 
 		" HTML
 		call dein#add('mattn/emmet-vim')
@@ -139,9 +139,9 @@ if dein#load_state(expand('~/.config/nvim'))
 		call dein#add('zchee/deoplete-jedi')
 
 		" Elixir
-		call dein#add('slashmili/alchemist.vim')
-		call dein#add('c-brenn/phoenix.vim')
-		call dein#add('carlosgaldino/elixir-snippets')
+		call dein#add('slashmili/alchemist.vim', {'on_ft': 'elixir'})
+		call dein#add('c-brenn/phoenix.vim', {'on_ft': 'elixir'})
+		call dein#add('carlosgaldino/elixir-snippets', {'on_ft': 'elixir'})
 
 		" PHP
 		call dein#add('pbogut/deoplete-padawan', {'on_ft': 'php', 'build': 'composer install'})
@@ -180,14 +180,17 @@ if dein#load_state(expand('~/.config/nvim'))
 	call dein#add('tpope/vim-fugitive')
 	call dein#add('tpope/vim-unimpaired')
 	call dein#add('rhysd/vim-grammarous')
+	call dein#add('beloglazov/vim-online-thesaurus')
 	call dein#add('vim-scripts/SyntaxRange')
 	call dein#add('scrooloose/nerdcommenter')
 	call dein#add('tmux-plugins/vim-tmux-focus-events')
+	call dein#add('wellle/tmux-complete.vim')
 	call dein#add('tpope/vim-rhubarb')
 	call dein#add('mattn/gist-vim')
 	call dein#add('mattn/webapi-vim')
 	call dein#add('thinca/vim-ref')
 	call dein#add('sbdchd/neoformat')
+	call dein#add('blueyed/vim-diminactive')
 
 	call dein#remote_plugins()
 
@@ -335,7 +338,7 @@ autocmd! BufWritePost * Neomake
 
 " Mappings {{{
 " Toggle automatic paragraph formatting
-nmap cof :set =(&formatoptions =~ "a") ? 'formatoptions-=a' : 'formatoptions+=a'
+nmap =of :set =(&formatoptions =~ "a") ? 'formatoptions-=a' : 'formatoptions+=a'
 
 nmap ga <Plug>(EasyAlign)
 
@@ -350,10 +353,6 @@ nn <c-p>c :CtrlPCmdline<cr>
 nn <c-p>y :CtrlPYankring<cr>
 nn <c-p>t :CtrlPTag<cr>
 nn <c-p>f :CtrlPFunky<cr>
-" }}}
-
-" Dictionaries and thesaurus {{{
-set thesaurus+=~/.config/nvim/thesaurus.txt
 " }}}
 
 set conceallevel=2
@@ -372,3 +371,4 @@ let g:jedi#force_py_version = 3
 let g:echodoc#enable_at_startup = 1
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#max_menu_width = 100
+let g:tmuxcomplete#trigger = ''
