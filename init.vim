@@ -221,6 +221,16 @@ endif
 
 	colorscheme hybrid
 	let g:airline_theme = 'lucius'
+
+	highlight Comment term=italic cterm=italic gui=italic
+
+	set listchars=tab:\|\ ,trail:-,nbsp:+
+	set list
+
+	highlight ExtraWhitespace term=inverse cterm=inverse gui=inverse
+
+	" Show trailing whitespace and spaces before a tab:
+	autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/ containedin=ALL
 	" }}}
 
 set cursorline
@@ -281,37 +291,37 @@ let g:mapleader=";"
 
 " let g:clang_format#code_style = "mozilla"
 " let g:clang_format#style_options = {
-" 			\ "BasedOnStyle"                         : "Mozilla",
-" 			\ "ColumnLimit"                          : 100,
-" 			\ "TabWidth"                             : 4,
-" 			\ "IndentWidth"                          : 4,
-" 			\ "UseTab"                               : "ForIndentation",
-" 			\ "SpaceBeforeParens"                    : "Never",
-" 			\ "BreakBeforeBraces"                    : "Attach",
-" 			\ "Standard"                             : "Cpp11",
-" 			\ "Cpp11BracedListStyle"                 : "true",
-" 			\ "NamespaceIndentation"                 : "All",
-" 			\ "ConstructorInitializerIndentWidth"    : 6,
-" 			\ "AccessModifierOffset"                 : -4,
-" 			\ "DerivePointerAlignment"               : "false",
-" 			\ "PointerAlignment"                     : "Left",
-" 			\ "AlwaysBreakTemplateDeclarations"      : "true",
-" 			\ "AlwaysBreakAfterDefinitionReturnType" : "None",
-" 			\ "BinPackArguments"                     : "false",
-" 			\ "BinPackParameters"                    : "false",
-" 			\ "PenaltyBreakBeforeFirstCallParameter" : 2,
-" 			\ "AllowShortFunctionsOnASingleLine"     : "Empty",
-" 			\ "AllowShortBlocksOnASingleLine"        : "false",
-" 			\ "AlignConsecutiveAssignments"          : "true",
-" 			\ "AlignTrailingComments"                : "true",
-" 			\ "ContinuationIndentWidth"              : 8
-" 			\ }
+"			\ "BasedOnStyle"                         : "Mozilla",
+"			\ "ColumnLimit"                          : 100,
+"			\ "TabWidth"                             : 4,
+"			\ "IndentWidth"                          : 4,
+"			\ "UseTab"                               : "ForIndentation",
+"			\ "SpaceBeforeParens"                    : "Never",
+"			\ "BreakBeforeBraces"                    : "Attach",
+"			\ "Standard"                             : "Cpp11",
+"			\ "Cpp11BracedListStyle"                 : "true",
+"			\ "NamespaceIndentation"                 : "All",
+"			\ "ConstructorInitializerIndentWidth"    : 6,
+"			\ "AccessModifierOffset"                 : -4,
+"			\ "DerivePointerAlignment"               : "false",
+"			\ "PointerAlignment"                     : "Left",
+"			\ "AlwaysBreakTemplateDeclarations"      : "true",
+"			\ "AlwaysBreakAfterDefinitionReturnType" : "None",
+"			\ "BinPackArguments"                     : "false",
+"			\ "BinPackParameters"                    : "false",
+"			\ "PenaltyBreakBeforeFirstCallParameter" : 2,
+"			\ "AllowShortFunctionsOnASingleLine"     : "Empty",
+"			\ "AllowShortBlocksOnASingleLine"        : "false",
+"			\ "AlignConsecutiveAssignments"          : "true",
+"			\ "AlignTrailingComments"                : "true",
+"			\ "ContinuationIndentWidth"              : 8
+"			\ }
 
 " Neoformat
 map <silent> <buffer> <LocalLeader>f :Neoformat<cr>
 
 " Enabling cscopes
-set cscopetag cscopeverbose
+"set cscopetag cscopeverbose
 
 set completefunc=syntaxcomplete#Complete
 
