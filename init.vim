@@ -74,6 +74,7 @@ if dein#load_state(expand('~/.config/nvim'))
 	"call dein#add('majutsushi/tagbar')
 	call dein#add('mbbill/undotree')
 	call dein#add('Shougo/echodoc.vim')
+	call dein#add('blueyed/vim-diminactive')
 
 	" Motions
 	call dein#add('vim-scripts/matchit.zip')
@@ -190,7 +191,6 @@ if dein#load_state(expand('~/.config/nvim'))
 	call dein#add('mattn/webapi-vim')
 	call dein#add('thinca/vim-ref')
 	call dein#add('sbdchd/neoformat')
-	call dein#add('blueyed/vim-diminactive')
 	call dein#add('mhinz/vim-grepper')
 	call dein#add('nelstrom/vim-visual-star-search')
 
