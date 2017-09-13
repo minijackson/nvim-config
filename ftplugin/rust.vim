@@ -26,4 +26,8 @@ let g:LanguageClient_serverCommands = {
 			\ 'rust': [expand('~/.cargo/bin/rls')],
 			\ }
 
+nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+
 LanguageClientStart

@@ -71,9 +71,9 @@ if dein#load_state(expand('~/.config/nvim'))
 	call dein#add('gorodinskiy/vim-coloresque')
 	call dein#add('kien/rainbow_parentheses.vim')
 	call dein#add('powerman/vim-plugin-AnsiEsc')
-	"call dein#add('majutsushi/tagbar')
+	call dein#add('majutsushi/tagbar')
 	call dein#add('mbbill/undotree')
-	call dein#add('Shougo/echodoc.vim')
+	"call dein#add('Shougo/echodoc.vim')
 	call dein#add('blueyed/vim-diminactive')
 
 	" Motions
@@ -89,7 +89,6 @@ if dein#load_state(expand('~/.config/nvim'))
 
 	" Languages
 	call dein#add('sheerun/vim-polyglot')
-	call dein#add('lyuts/vim-rtags')
 	"call dein#add('ludovicchabant/vim-gutentags')
 	"call dein#add('igankevich/mesonic')
 
@@ -103,11 +102,13 @@ if dein#load_state(expand('~/.config/nvim'))
 
 		" Java
 		call dein#add('artur-shaik/vim-javacomplete2')
-		"call dein#add('ervandew/eclim',
-					"\ { 'build':
-					"\     'ant -Declipse.home=' . $ECLIPSE_PATH .
-					"\     ' -Dvim.files=' . escape(expand('~/.config/nvim/.cache/init.vim/.dein/'), '')
-					"\ } )
+		call dein#add('ervandew/eclim',
+					\ { 'on_ft': 'java',
+					\   'rev': '2.6.0',
+					\   'build':
+					\     'ant -Declipse.home=' . $ECLIPSE_PATH .
+					\     ' -Dvim.files=' . escape(expand('~/.config/nvim/repos/github.com/ervandew/eclim'), '')
+					\ } )
 
 		" R
 		call dein#add('jalvesaq/Nvim-R')
@@ -115,9 +116,6 @@ if dein#load_state(expand('~/.config/nvim'))
 		" Go
 		call dein#add('fatih/vim-go', {'on_ft': 'go'})
 		call dein#add('zchee/deoplete-go', {'on_ft': 'go'})
-
-		" Rust
-		call dein#add('racer-rust/vim-racer', {'on_ft': 'rust'})
 
 		" Rust
 		call dein#add('racer-rust/vim-racer', {'on_ft': 'rust'})
@@ -132,6 +130,7 @@ if dein#load_state(expand('~/.config/nvim'))
 
 		" C#
 		call dein#add('OmniSharp/omnisharp-vim', {'on_ft': 'cs'})
+		call dein#add('dimixar/deoplete-omnisharp', {'on_ft': 'cs'})
 
 		" HTML
 		call dein#add('mattn/emmet-vim')
@@ -150,6 +149,10 @@ if dein#load_state(expand('~/.config/nvim'))
 		" C / C++
 		call dein#add('Shougo/neoinclude.vim')
 		call dein#add('justmao945/vim-clang')
+		"call dein#add('tweekmonster/deoplete-clang2')
+		call dein#add('lyuts/vim-rtags')
+		" WIP
+		"call dein#add('rzaluska/deoplete-rtags')
 
 		" Scala
 		call dein#add('ensime/ensime-vim')
@@ -163,6 +166,9 @@ if dein#load_state(expand('~/.config/nvim'))
 		" RFC
 		call dein#add('mhinz/vim-rfc')
 		call dein#add('vim-scripts/rfc-syntax')
+
+		"Zsh
+		call dein#add('zchee/deoplete-zsh')
 
 	" Frameworks
 	call dein#add('tpope/vim-projectionist')
@@ -215,7 +221,7 @@ endif
 	set background=dark
 
 	" Gruvbox
-	let g:gruvbox_contrast_dark = 'medium'
+	let g:gruvbox_contrast_dark = 'soft'
 
 	"colorscheme gruvbox
 
@@ -224,13 +230,16 @@ endif
 
 	highlight Comment term=italic cterm=italic gui=italic
 
-	set listchars=tab:\|\ ,trail:-,nbsp:+
+	set listchars=tab:│\ ,trail:-,nbsp:+
 	set list
+
+	set fillchars=fold:─,vert:│
 
 	highlight ExtraWhitespace term=inverse cterm=inverse gui=inverse
 
 	" Show trailing whitespace and spaces before a tab:
 	autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/ containedin=ALL
+
 	" }}}
 
 set cursorline
