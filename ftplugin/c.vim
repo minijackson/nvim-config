@@ -1,7 +1,3 @@
-" Deoplete-Clang
-let g:deoplete#sources#clang#libclang_path = '/usr/lib64/libclang.so'
-let g:deoplete#sources#clang#clang_header = '/usr/lib64/clang/3.9.0/include'
-
 " Vim-clang
 let g:clang_use_library=1
 let g:clang_c_options = '-std=gnu11'

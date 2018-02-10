@@ -2,9 +2,7 @@ setlocal completefunc=syntaxcomplete#Complete
 setlocal colorcolumn=100
 setlocal foldmethod=marker
 
-" Deoplete-Clang
-"let g:deoplete#sources#clang#libclang_path = '/usr/lib64/libclang.so'
-"let g:deoplete#sources#clang#clang_header = '/usr/lib64/clang/3.9.0/include'
+setlocal path+=/usr/lib64/gcc/x86_64-pc-linux-gnu/7.2.0/include/g++-v7/
 
 " Vim-clang
 let g:clang_use_library = 1
@@ -28,7 +26,7 @@ if !exists('g:deoplete#omni#input_patterns')
 	let g:deoplete#omni#input_patterns = {}
 endif
 let g:deoplete#omni#input_patterns.cpp = [
-			\ '[^. *\t]\.\w*',
+			\ '[^. *\t0-9]\.\w*',
 			\ '[^. *\t]->\w*',
 			\ '[\w>]*::\w*',
 			\ ]
