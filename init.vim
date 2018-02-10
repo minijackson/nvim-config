@@ -23,7 +23,8 @@ syntax on
 " reopening a file
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-filetype plugin indent on
+filetype off
+filetype plugin indent off
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
@@ -74,10 +75,8 @@ if dein#load_state(expand('~/.config/nvim'))
 	call dein#add('majutsushi/tagbar')
 	call dein#add('mbbill/undotree')
 	"call dein#add('Shougo/echodoc.vim')
-	call dein#add('blueyed/vim-diminactive')
 
 	" Motions
-	call dein#add('vim-scripts/matchit.zip')
 	call dein#add('tpope/vim-surround')
 	call dein#add('tommcdo/vim-exchange')
 	call dein#add('bkad/CamelCaseMotion')
@@ -86,6 +85,7 @@ if dein#load_state(expand('~/.config/nvim'))
 	call dein#add('junegunn/vim-easy-align')
 	call dein#add('justinmk/vim-dirvish')
 	call dein#add('mhinz/vim-startify')
+	call dein#add('andymass/vim-matchup')
 
 	" Languages
 	call dein#add('sheerun/vim-polyglot')
@@ -93,15 +93,15 @@ if dein#load_state(expand('~/.config/nvim'))
 	"call dein#add('igankevich/mesonic')
 
 		" CSV
-		call dein#add('chrisbra/csv.vim')
+		call dein#add('chrisbra/csv.vim', {'on_ft': 'csv'})
 
 		" JavaScript
-		call dein#add('myhere/vim-nodejs-complete')
-		call dein#add('moll/vim-node')
-		call dein#add('carlitux/deoplete-ternjs')
+		call dein#add('myhere/vim-nodejs-complete', {'on_ft': 'javascript'})
+		call dein#add('moll/vim-node', {'on_ft': 'javascript'})
+		call dein#add('carlitux/deoplete-ternjs', {'on_ft': 'javascript'})
 
 		" Java
-		call dein#add('artur-shaik/vim-javacomplete2')
+		call dein#add('artur-shaik/vim-javacomplete2', {'on_ft': 'java'})
 		call dein#add('ervandew/eclim',
 					\ { 'on_ft': 'java',
 					\   'rev': '2.6.0',
@@ -121,7 +121,7 @@ if dein#load_state(expand('~/.config/nvim'))
 		call dein#add('racer-rust/vim-racer', {'on_ft': 'rust'})
 
 		" Lisp
-		call dein#add('kovisoft/slimv')
+		call dein#add('kovisoft/slimv', {'on_ft': 'lisp'})
 
 		" Haskell
 		call dein#add('eagletmt/neco-ghc', {'on_ft': 'haskell'})
@@ -129,36 +129,42 @@ if dein#load_state(expand('~/.config/nvim'))
 		call dein#add('mpickering/hlint-refactor-vim', {'on_ft': 'haskell'})
 
 		" C#
-		call dein#add('OmniSharp/omnisharp-vim', {'on_ft': 'cs'})
+		call dein#add('OmniSharp/omnisharp-vim',
+					\ { 'on_ft': 'cs',
+					\   'build': 'sh -c "cd server && xbuild"'
+					\ } )
 		call dein#add('dimixar/deoplete-omnisharp', {'on_ft': 'cs'})
 
 		" HTML
-		call dein#add('mattn/emmet-vim')
+		call dein#add('mattn/emmet-vim', {'on_ft': ['html', 'svg', 'eelixir']})
 
 		" Python
-		call dein#add('zchee/deoplete-jedi')
+		call dein#add('zchee/deoplete-jedi', {'on_ft': 'python'})
 
 		" Elixir
 		call dein#add('slashmili/alchemist.vim', {'on_ft': 'elixir'})
 		call dein#add('c-brenn/phoenix.vim', {'on_ft': 'elixir'})
 		call dein#add('carlosgaldino/elixir-snippets', {'on_ft': 'elixir'})
 
+		" Elm
+		call dein#add('pbogut/deoplete-elm', {'on_ft': 'elm'})
+
 		" PHP
 		call dein#add('pbogut/deoplete-padawan', {'on_ft': 'php', 'build': 'composer install'})
 
 		" C / C++
 		call dein#add('Shougo/neoinclude.vim')
-		call dein#add('justmao945/vim-clang')
-		"call dein#add('tweekmonster/deoplete-clang2')
-		call dein#add('lyuts/vim-rtags')
+		call dein#add('justmao945/vim-clang', {'on_ft': ['c', 'cpp']})
+		"call dein#add('tweekmonster/deoplete-clang2', {'on_ft': ['c', 'cpp']})
+		call dein#add('lyuts/vim-rtags', {'on_ft': ['c', 'cpp']})
 		" WIP
-		"call dein#add('rzaluska/deoplete-rtags')
+		call dein#add('rzaluska/deoplete-rtags', {'on_ft': ['c', 'cpp']})
 
 		" Scala
-		call dein#add('ensime/ensime-vim')
+		"call dein#add('ensime/ensime-vim', {'on_ft': 'scala'})
 
 		" Prolog
-		call dein#add('adimit/prolog.vim')
+		call dein#add('adimit/prolog.vim', {'on_ft': 'prolog'})
 
 		" EditorConfig
 		call dein#add('editorconfig/editorconfig-vim')
@@ -168,7 +174,14 @@ if dein#load_state(expand('~/.config/nvim'))
 		call dein#add('vim-scripts/rfc-syntax')
 
 		"Zsh
-		call dein#add('zchee/deoplete-zsh')
+		call dein#add('zchee/deoplete-zsh', {'on_ft': 'zsh'})
+
+		"Binary
+		"call dein#add('fidian/hexmode')
+		call dein#add('Shougo/vinarise.vim')
+
+		" ViML
+		call dein#add('Shougo/neco-vim', {'on_ft': 'vim'})
 
 	" Frameworks
 	call dein#add('tpope/vim-projectionist')
@@ -180,8 +193,10 @@ if dein#load_state(expand('~/.config/nvim'))
 	call dein#add('Shougo/dein.vim')
 	call dein#add('benekastah/neomake')
 	call dein#add('kana/vim-operator-user')
-	call dein#add('SirVer/ultisnips')
-	call dein#add('autozimu/LanguageClient-neovim')
+	call dein#add('SirVer/ultisnips', {'lazy': 1})
+	call dein#add('autozimu/LanguageClient-neovim', {'rev': 'next', 'build': './install.sh'})
+	call dein#add('Shougo/neco-syntax')
+	call dein#add('tpope/vim-dispatch')
 
 	" Utility
 	call dein#add('tpope/vim-fugitive')
@@ -192,13 +207,14 @@ if dein#load_state(expand('~/.config/nvim'))
 	call dein#add('scrooloose/nerdcommenter')
 	call dein#add('tmux-plugins/vim-tmux-focus-events')
 	call dein#add('wellle/tmux-complete.vim')
-	call dein#add('tpope/vim-rhubarb')
+	call dein#add('tpope/vim-rhubarb', {'on_ft': 'gitcommit'})
 	call dein#add('mattn/gist-vim')
 	call dein#add('mattn/webapi-vim')
 	call dein#add('thinca/vim-ref')
 	call dein#add('sbdchd/neoformat')
 	call dein#add('mhinz/vim-grepper')
 	call dein#add('nelstrom/vim-visual-star-search')
+	"call dein#add('xtal8/traces.vim')
 
 	call dein#remote_plugins()
 
@@ -209,7 +225,7 @@ endif
 
 " If you want to install not installed plugins on startup.
 if dein#check_install()
-  call dein#install()
+	call dein#install()
 endif
 
 " }}}
@@ -237,15 +253,18 @@ endif
 
 	highlight ExtraWhitespace term=inverse cterm=inverse gui=inverse
 
-	" Show trailing whitespace and spaces before a tab:
+	" Show trailing whitespace and spaces before tabs:
 	autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/ containedin=ALL
+
+	highlight InactiveWin guibg=#282a2e
+	set winhighlight=NormalNC:InactiveWin
 
 	" }}}
 
 set cursorline
 
 set backup
-set backupdir=/tmp
+set backupdir-=.
 set undofile
 
 set autoindent
@@ -267,14 +286,11 @@ set laststatus=2
 
 set title
 
-" Status line
-set statusline=%F%m%r%h%w\ [%{getcwd()}]\ [%p%%]%=[FORMAT=%{&ff}/%Y]\ [POS=%l,%v]\ (%{strftime(\"%d/%m/%y\ -\ %H:%M\")})
-
-" 80 character right margin
 set colorcolumn=80
 
 " Airline conf
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#whitespace#mixed_indent_algo = 2
 
 " Menu when completing commands
 set wildmenu
@@ -298,7 +314,6 @@ autocmd VimLeave * let &t_SI = "\<Esc>[1 q"
 let g:maplocalleader=","
 let g:mapleader=";"
 
-" let g:clang_format#code_style = "mozilla"
 " let g:clang_format#style_options = {
 "			\ "BasedOnStyle"                         : "Mozilla",
 "			\ "ColumnLimit"                          : 100,
@@ -342,6 +357,29 @@ set mouse=a
 " program to always generate a file-name.
 set grepprg=grep\ -nH\ $*
 
+" LanguageClient config {{{
+let g:LanguageClient_autoStart = 1
+augroup LanguageClient_config
+	autocmd!
+	autocmd User LanguageClientStarted nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+    autocmd User LanguageClientStarted nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+    autocmd User LanguageClientStarted nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+    autocmd User LanguageClientStarted setlocal formatexpr=LanguageClient_textDocument_rangeFormatting()
+augroup END
+
+" \ 'rust': ['rustup', 'run', 'nightly-2017-12-01', 'rls'],
+let g:LanguageClient_serverCommands = {
+			\ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+			\ }
+
+" }}}
+
+" Nvim-R config {{{
+let R_pdfviewer = 'evince'
+let R_latexcmd = ['latexmk', '-pdf', '-xelatex', '-synctex=1', '-8bit', '-shell-escape']
+"%     latexmk -pdf -pvc -shell-escape -xelatex -8bit document
+" }}}
+
 " Neomake config {{{
 
 let g:neomake_error_sign = {
@@ -353,7 +391,8 @@ let g:neomake_warning_sign = {
 			\ 'texthl': 'WarningMsg',
 			\ }
 
-autocmd! BufWritePost * Neomake
+call neomake#configure#automake('w', 750)
+"call neomake#configure#automake('nw', 750)
 
 " }}}
 
@@ -385,7 +424,6 @@ set concealcursor=nv
 call camelcasemotion#CreateMotionMappings(g:mapleader)
 
 " Enable emmet by filetype
-let g:user_emmet_install_global = 0
 let g:user_emmet_leader_key = '<c-s>'
 
 " Grepper plugin config
@@ -396,8 +434,11 @@ let g:grepper = {
 "}}}
 
 let g:startify_fortune_use_unicode = 1
+let g:startify_bookmarks = [{'i': '~/.config/nvim/init.vim'}]
 let g:jedi#force_py_version = 3
 let g:echodoc#enable_at_startup = 1
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#max_menu_width = 100
 let g:tmuxcomplete#trigger = ''
+
+filetype plugin indent on

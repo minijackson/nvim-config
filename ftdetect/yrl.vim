@@ -1,1 +1,1 @@
-au BufNewFile,BufRead *.yrl set ft=erlang
+autocmd BufNewFile,BufRead *.yrl set filetype=erlang
