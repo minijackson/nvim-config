@@ -23,9 +23,6 @@ syntax on
 " reopening a file
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-filetype off
-filetype plugin indent off
-
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
 set showcmd    " Show (partial) command in status line.
