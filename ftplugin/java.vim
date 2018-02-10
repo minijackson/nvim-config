@@ -1,6 +1,7 @@
 setlocal omnifunc=javacomplete#Complete
 
-let g:neomake_java_enabled_makers = ['checkstyle']
+"let g:neomake_java_enabled_makers = ['checkstyle']
+let g:neomake_java_enabled_makers = []
 
 " Eclim mappings
 nnoremap <silent> <buffer> <localleader>i :JavaImport<cr>
